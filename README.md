@@ -7,4 +7,4 @@ Il "main" contiene tutte le consegne richieste, ma non il codice sviluppato...
 
 
 N.B.
-[PER VISIONARE IL CODICE SVILUPPATO NEI VARI "SPRINTS", NAVIGATE TRA I RELATIVI BRANCH !!!]
+[PER VISIONARE IL CODICE SVILUPPATO NEI VARI "SPRINTS": Navigate nei relativi Branch !!!]
