@@ -22,6 +22,7 @@ public class Regola {
     //-----------------//
 
 
+
     private boolean valutaAttivazione(){
 
         return false;
