@@ -1,6 +1,5 @@
 package com.example.ifttt;
 
-import java.time.DayOfWeek;
 import java.time.LocalTime;
 
 public class Regola {
