@@ -11,6 +11,7 @@ public class Regola {
     LocalTime quiescenza;
 
 
+
     //---COSTRUTTORE---//
     public Regola(Trigger t, Azione a, boolean stato, boolean ripetibile, LocalTime quiescenza) {
         this.t = t;
@@ -23,10 +24,41 @@ public class Regola {
 
 
 
-    private boolean valutaAttivazione(){
+    // Metodo per impostare lo stato della regola
+    public void setStato(boolean stato) {
+        this.stato = stato;
+    }
+
+    private boolean validazioneRegola(){
 
         return false;
 
+    }
+
+
+
+    public void setTrigger(Trigger nuovoTrigger) {
+    }
+
+    public void setAzione(Azione nuovaAzione) {
+    }
+
+    public void setRipetibile(boolean nuovaRipetibilita) {
+    }
+
+    public void setQuiescenza(LocalTime nuovaQuiescenza) {
+    }
+
+
+    @Override
+    public String toString() {
+        return "Regola{" +
+                "t=" + t +
+                ", a=" + a +
+                ", stato=" + stato +
+                ", ripetibile=" + ripetibile +
+                ", quiescenza=" + quiescenza +
+                '}';
     }
 
 
