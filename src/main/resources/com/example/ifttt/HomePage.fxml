@@ -8,20 +8,20 @@
 
 <StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ifttt.HelloController">
   <children>
-    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0">
       <children>
-        <TableView fx:id="tabellaRegole" layoutX="14.0" layoutY="20.0" prefHeight="692.0" prefWidth="971.0">
+        <TableView fx:id="tabellaRegole" layoutX="15.0" layoutY="32.0" prefHeight="619.0" prefWidth="971.0">
           <columns>
             <TableColumn fx:id="idRegola" prefWidth="75.0" text="#" />
-            <TableColumn fx:id="nomeRegola" prefWidth="122.0" text="Nome" />
-            <TableColumn fx:id="triggerRegola" prefWidth="207.0" text="Trigger" />
-            <TableColumn fx:id="azioneRegola" prefWidth="171.0" text="Azione" />
-            <TableColumn fx:id="ripetibilita" prefWidth="79.0" text="Ripetibile" />
-            <TableColumn fx:id="stato" prefWidth="117.0" text="Attiva/Disattiva" />
+            <TableColumn fx:id="nomeRegola" prefWidth="154.0" text="Nome" />
+            <TableColumn fx:id="triggerRegola" prefWidth="283.0" text="Trigger" />
+            <TableColumn fx:id="azioneRegola" prefWidth="260.0" text="Azione" />
+            <TableColumn fx:id="ripetibilita" text="Ripetibile" />
+            <TableColumn fx:id="stato" prefWidth="118.0" text="Attiva/Disattiva" />
           </columns>
         </TableView>
-        <Button fx:id="creaRegolaButton" layoutX="14.0" layoutY="760.0" mnemonicParsing="false" onAction="#apriFinestraCreazioneRegola" text="Crea Regola" />
-        <Button fx:id="modificaRegolaButton" layoutX="111.0" layoutY="760.0" mnemonicParsing="false" onAction="#modificaRegola" text="Elimina" />
+        <Button fx:id="creaRegolaButton" layoutX="14.0" layoutY="703.0" mnemonicParsing="false" onAction="#apriFinestraCreazioneRegola" prefHeight="33.0" prefWidth="93.0" text="Crea Regola" />
+        <Button fx:id="modificaRegolaButton" layoutX="920.0" layoutY="703.0" mnemonicParsing="false" onAction="#modificaRegola" prefHeight="33.0" prefWidth="65.0" text="Elimina" />
       </children>
     </AnchorPane>
   </children>
