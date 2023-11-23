@@ -8,9 +8,9 @@
 
 <StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ifttt.HelloController">
   <children>
-    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0">
       <children>
-        <TableView fx:id="tabellaRegole" layoutX="14.0" layoutY="20.0" prefHeight="499.0" prefWidth="772.0">
+        <TableView fx:id="tabellaRegole" layoutX="14.0" layoutY="20.0" prefHeight="692.0" prefWidth="971.0">
           <columns>
             <TableColumn fx:id="idRegola" prefWidth="75.0" text="#" />
             <TableColumn fx:id="nomeRegola" prefWidth="122.0" text="Nome" />
@@ -20,8 +20,8 @@
             <TableColumn fx:id="stato" prefWidth="117.0" text="Attiva/Disattiva" />
           </columns>
         </TableView>
-        <Button fx:id="creaRegolaButton" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#apriFinestraCreazioneRegola" text="Crea Regola" />
-        <Button fx:id="modificaRegolaButton" layoutX="109.0" layoutY="561.0" mnemonicParsing="false" onAction="#modificaRegola" text="Elimina" />
+        <Button fx:id="creaRegolaButton" layoutX="14.0" layoutY="760.0" mnemonicParsing="false" onAction="#apriFinestraCreazioneRegola" text="Crea Regola" />
+        <Button fx:id="modificaRegolaButton" layoutX="111.0" layoutY="760.0" mnemonicParsing="false" onAction="#modificaRegola" text="Elimina" />
       </children>
     </AnchorPane>
   </children>
