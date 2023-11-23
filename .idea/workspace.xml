@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Initial Configuration: JavaFX">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/OperaSullaRegola.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/OperaSullaRegola.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,8 @@
       <workItem from="1700726813033" duration="652000" />
       <workItem from="1700732586789" duration="2067000" />
       <workItem from="1700736693296" duration="1444000" />
-      <workItem from="1700740552218" duration="1022000" />
+      <workItem from="1700740552218" duration="1637000" />
+      <workItem from="1700743517438" duration="395000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -148,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700739575325</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial Configuration: JavaFX">
+      <option name="closed" value="true" />
+      <created>1700742323458</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700742323458</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
