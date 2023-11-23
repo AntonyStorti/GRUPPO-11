@@ -10,19 +10,19 @@
   <children>
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
       <children>
-        <TableView layoutX="14.0" layoutY="20.0" prefHeight="499.0" prefWidth="772.0">
+        <TableView fx:id="elencoRegole" layoutX="14.0" layoutY="20.0" prefHeight="499.0" prefWidth="772.0">
           <columns>
-            <TableColumn prefWidth="75.0" text="#" />
-            <TableColumn prefWidth="122.0" text="Nome" />
-            <TableColumn prefWidth="207.0" text="Trigger" />
-            <TableColumn prefWidth="171.0" text="Azione" />
-            <TableColumn prefWidth="79.0" text="Ripetibile" />
-            <TableColumn prefWidth="117.0" text="Attiva/Disattiva" />
+            <TableColumn fx:id="idRegola" prefWidth="75.0" text="#" />
+            <TableColumn fx:id="nomeRegola" prefWidth="122.0" text="Nome" />
+            <TableColumn fx:id="triggerRegola" prefWidth="207.0" text="Trigger" />
+            <TableColumn fx:id="azioneRegola" prefWidth="171.0" text="Azione" />
+            <TableColumn fx:id="ripetibile" prefWidth="79.0" text="Ripetibile" />
+            <TableColumn fx:id="sliderAttivazione" prefWidth="117.0" text="Attiva/Disattiva" />
           </columns>
         </TableView>
-        <Button layoutX="729.0" layoutY="560.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Elimina" />
+        <Button fx:id="eliminaRegolaButton" layoutX="729.0" layoutY="560.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Elimina" onAction="#eliminaRegola" />
         <Button fx:id="creaRegolaButton" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" text="Crea Regola" onAction="#apriFinestraCreazioneRegola" />
-        <Button layoutX="109.0" layoutY="561.0" mnemonicParsing="false" text="Modifica" />
+        <Button fx:id="modificaRegolaButton" layoutX="109.0" layoutY="561.0" mnemonicParsing="false" text="Modifica" onAction="#modificaRegola"/>
       </children>
     </AnchorPane>
   </children>
