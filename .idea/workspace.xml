@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Initial Configuration: JavaFX">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/HomePage.fxml" afterDir="false" />
@@ -41,7 +42,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -68,6 +69,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/ifttt" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -95,6 +101,9 @@
       <workItem from="1700751957718" duration="1189000" />
       <workItem from="1700753247220" duration="2231000" />
       <workItem from="1700755931826" duration="23000" />
+      <workItem from="1700756292612" duration="104000" />
+      <workItem from="1700768608271" duration="549000" />
+      <workItem from="1700814467684" duration="399000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -184,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700754197740</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Initial Configuration: JavaFX">
+      <option name="closed" value="true" />
+      <created>1700756373825</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700756373825</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Initial Configuration: JavaFX">
+      <option name="closed" value="true" />
+      <created>1700756389409</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700756389409</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
