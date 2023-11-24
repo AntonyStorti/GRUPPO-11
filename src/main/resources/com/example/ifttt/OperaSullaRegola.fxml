@@ -9,18 +9,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ifttt.CreaRegolaController">
     <children>
         <Text layoutX="226.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci il nome:" wrappingWidth="111.64697265625">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Text>
-        <TextField fx:id="SceltaNome" layoutX="338.0" layoutY="28.0" />
-        <ChoiceBox fx:id="SceltaTrigger" layoutX="368.0" layoutY="163.0" prefWidth="150.0">
+        <TextField fx:id="sceltaNome" layoutX="338.0" layoutY="28.0" />
+        <ChoiceBox fx:id="sceltaTrigger" layoutX="368.0" layoutY="163.0" prefWidth="150.0" onAction="#apriFinestraSceltaOra">
             <items>
                 <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="Seleziona un orario" />
+                    <String fx:id="oraTrigger" fx:value="Seleziona un orario" />
                     <String fx:value="Opzione2" />
                     <String fx:value="Opzione3" />
                 </FXCollections>

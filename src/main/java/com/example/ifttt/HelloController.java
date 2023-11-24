@@ -25,7 +25,6 @@ public class HelloController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("OperaSullaRegola.fxml"));
             Parent root = loader.load();
-
             Stage stage = new Stage();
             stage.setTitle("Crea la tua Regola...");
             stage.setScene(new Scene(root));
@@ -38,6 +37,5 @@ public class HelloController {
     public void eliminaRegola(ActionEvent actionEvent) {
     }
 
-    public void modificaRegola(ActionEvent actionEvent) {
-    }
+
 }

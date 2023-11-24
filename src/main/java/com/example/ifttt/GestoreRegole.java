@@ -1,15 +1,19 @@
 package com.example.ifttt;
 
-import javafx.collections.*;
+import javafx.collections.ObservableList;
+import java.util.logging.Logger;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalTime;
 
 
-public class GestoreRegole {
+
+public class GestoreRegole implements Runnable {
+
 
     private ObservableList<Regola> listaRegole;
+    private final int ripetiVerifica = 3;
+
 
 
     //---COSTRUTTORE---//
@@ -20,7 +24,38 @@ public class GestoreRegole {
 
 
 
-    // Metodo per aggiungere una regola alla lista
+    @Override
+    public void run() {
+
+        while(!Thread.currentThread().isInterrupted()){
+
+            synchronized(listaRegole){
+
+                //Itero sugli elementi della lista//
+                for(Regola a : listaRegole)
+                    a.valutaEsecuzione();
+
+            }
+
+            try{
+
+                Thread.sleep(ripetiVerifica*1000);
+
+                }
+            catch (InterruptedException ex) {
+
+                 Logger.getLogger(GestoreRegole.class.getName());
+
+            }
+
+        }
+
+    }
+
+
+
+
+    //-----METODI PER GESTIRE LE REGOLE-----//
     public void addRegola(Regola nuovaRegola) {
         listaRegole.add(nuovaRegola);
     }
@@ -30,24 +65,17 @@ public class GestoreRegole {
         listaRegole.remove(regolaDaRimuovere);
     }
 
-    // Metodo per attivare una regola
+
+
     public void attivaRegola(Regola regolaDaAttivare) {
         regolaDaAttivare.setStato(true);
     }
 
-    // Metodo per disattivare una regola
     public void disattivaRegola(Regola regolaDaDisattivare) {
         regolaDaDisattivare.setStato(false);
     }
 
-    // Metodo per modificare una regola esistente
-    public void modificaRegola(Regola regolaDaModificare, Trigger nuovoTrigger, Azione nuovaAzione, boolean nuovoStato, boolean nuovaRipetibilita, LocalTime nuovaQuiescenza) {
-        regolaDaModificare.setTrigger(nuovoTrigger);
-        regolaDaModificare.setAzione(nuovaAzione);
-        regolaDaModificare.setStato(nuovoStato);
-        regolaDaModificare.setRipetibile(nuovaRipetibilita);
-        regolaDaModificare.setQuiescenza(nuovaQuiescenza);
-    }
+
 
     // Metodo per salvare le regole su un file di testo
     public void salvaSuFile(String nomeFile) {
