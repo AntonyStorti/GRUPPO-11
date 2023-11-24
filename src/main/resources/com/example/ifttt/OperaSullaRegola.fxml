@@ -26,7 +26,7 @@
                 </FXCollections>
             </items>
         </ChoiceBox>
-        <ChoiceBox fx:id="SceltaAzione" layoutX="368.0" layoutY="242.0" prefWidth="150.0">
+        <ChoiceBox fx:id="sceltaAzione" layoutX="368.0" layoutY="242.0" prefWidth="150.0">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:value="Riproduci un audio" />

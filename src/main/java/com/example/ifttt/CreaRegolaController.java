@@ -8,6 +8,13 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.application.Application;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.scene.Node;
+import java.io.File;
+import java.util.EventObject;
+
 
 
 
@@ -16,11 +23,15 @@ public class CreaRegolaController {
 
     @FXML
     private ChoiceBox<String> sceltaTrigger;
+    @FXML
+    private ChoiceBox<String> sceltaAzione;
 
     @FXML
     private void initialize() {
         sceltaTrigger.setOnAction(event -> apriFinestraSceltaOra());
+        sceltaAzione.setOnAction(event -> apriFinestraSceltaAudio());
     }
+
 
 
     public void apriFinestraSceltaOra() {
@@ -48,7 +59,34 @@ public class CreaRegolaController {
 
     }
 
+    private void apriFinestraSceltaAudio() {
 
+        String selectedItem = sceltaAzione.getSelectionModel().getSelectedItem();
+        String sceltaAudio = "Riproduci un audio";
+
+        if (selectedItem.equals(sceltaAudio)){
+
+            try {
+
+                // Creare un oggetto FileChooser
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Seleziona un file audio...");
+                fileChooser.getExtensionFilters().addAll(
+                        new FileChooser.ExtensionFilter("File audio", "*.mp3", "*.wav", "*.ogg"),
+                        new FileChooser.ExtensionFilter("Tutti i file", "*.*")
+                );
+
+                Stage stage = (Stage) sceltaAzione.getScene().getWindow();
+
+                File selectedFile = fileChooser.showOpenDialog(stage);
+
+            } catch (Exception e) {
+                e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            }
+
+        }
+
+    }
 
 }
 
