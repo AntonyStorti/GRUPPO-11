@@ -74,6 +74,9 @@ public class CreaRegolaController {
                 stage.setTitle("Scrivi il tuo messaggio...");
                 stage.setScene(new Scene(root));
                 stage.show();
+
+
+
             } catch (Exception e) {
                 e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
             }
