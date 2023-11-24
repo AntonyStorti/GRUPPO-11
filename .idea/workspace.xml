@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Initial Configuration: JavaFX">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/FinestraDialogo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/RiproduciAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/RiproduciAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/OperaSullaRegola.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/OperaSullaRegola.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +128,7 @@
       <workItem from="1700768608271" duration="549000" />
       <workItem from="1700814467684" duration="9569000" />
       <workItem from="1700824487349" duration="2557000" />
-      <workItem from="1700832423049" duration="3629000" />
+      <workItem from="1700832423049" duration="9718000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -246,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700835048420</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Initial Configuration: JavaFX">
+      <option name="closed" value="true" />
+      <created>1700836290267</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700836290267</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,18 +288,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java</url>
-          <line>36</line>
-          <properties class="com.example.ifttt.CreaRegolaController" method="apriFinestraSceltaOra">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ifttt/RiproduciAudio.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

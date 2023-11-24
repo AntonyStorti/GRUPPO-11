@@ -17,23 +17,23 @@
             </font>
         </Text>
         <TextField fx:id="sceltaNome" layoutX="338.0" layoutY="28.0" />
-        <ChoiceBox fx:id="sceltaTrigger" layoutX="368.0" layoutY="163.0" prefWidth="150.0" onAction="#apriFinestraSceltaOra">
+        <ChoiceBox fx:id="sceltaTrigger" layoutX="368.0" layoutY="163.0" prefWidth="150.0" onAction="#apriFinestraSceltaTrigger">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:id="oraTrigger" fx:value="Seleziona un orario" />
-                    <String fx:value="Opzione2" />
-                    <String fx:value="Opzione3" />
                 </FXCollections>
             </items>
         </ChoiceBox>
-        <ChoiceBox fx:id="sceltaAzione" layoutX="368.0" layoutY="242.0" prefWidth="150.0">
+
+        <ChoiceBox fx:id="sceltaAzione" layoutX="368.0" layoutY="242.0" prefWidth="150.0" onAction="#apriFinestraSceltaAzioni">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:value="Riproduci un audio" />
-                    <String fx:value="Visualizza un messaggio a video" />
+                    <String fx:value="Visualizza messaggio"/>
                 </FXCollections>
             </items>
         </ChoiceBox>
+
         <Text layoutX="154.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli la condizione (Trigger):" wrappingWidth="210.64697265625">
             <font>
                 <Font name="System Bold" size="15.0" />
