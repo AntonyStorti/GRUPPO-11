@@ -76,20 +76,4 @@ public class GestoreRegole implements Runnable {
     }
 
 
-
-    // Metodo per salvare le regole su un file di testo
-    public void salvaSuFile(String nomeFile) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeFile))) {
-            for (Regola regola : listaRegole) {
-                // Scrivi le informazioni della regola nel file
-                writer.write(regola.toString());
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
 }

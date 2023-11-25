@@ -128,6 +128,7 @@ public class CreaRegolaController {
         String selectedTrigger = sceltaTrigger.getValue();
         String selectedAzione = sceltaAzione.getValue();
 
+
         //Tipi di Trigger;
         String sceltaOra = "Seleziona un orario";
 
@@ -147,6 +148,7 @@ public class CreaRegolaController {
                 e.printStackTrace();
             }
 
+            //Recupero il Trigger:
             TempoDelGiorno trigger1 = null;
             try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("trigger1.ser"))) {
                 trigger1 = (TempoDelGiorno) in.readObject();
@@ -155,13 +157,13 @@ public class CreaRegolaController {
             }
 
 
-            //CREA REGOLA
+
+            //CREA REGOLA!!!
             Regola oraMessaggio = new Regola(nome, trigger1, messaggioAllert, true);
 
 
             File fileMessaggioAllert = new File("messaggioAllert.ser");
             File fileTrigger1 = new File("trigger1.ser");
-
             fileMessaggioAllert.delete();
             fileTrigger1.delete();
 
@@ -171,6 +173,11 @@ public class CreaRegolaController {
 
         }
 
+        if (selectedTrigger.equals(sceltaOra) && selectedAzione.equals(sceltaAud)){
+
+
+
+        }
     }
 
 }

@@ -25,7 +25,6 @@ public class Regola {
         this.t = t;
         this.a = a;
         this.stato = true; //Di default attiva dopo la creazione!
-
         contatore++;
         eseguito=false;
     }
