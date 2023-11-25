@@ -21,7 +21,7 @@
             </font>
         </Text>
         <Button fx:id="conferma" layoutX="133.0" layoutY="160.0" mnemonicParsing="false" onAction="#inviaOrario" text="OK" />
-        <ChoiceBox fx:id="ore" layoutX="66.0" layoutY="61.0" prefHeight="26.0" prefWidth="67.0" onAction="#selezionaOre">
+        <ChoiceBox fx:id="oreBox" layoutX="66.0" layoutY="61.0" prefHeight="26.0" prefWidth="67.0">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:id="ore" fx:value="00" />
@@ -52,7 +52,7 @@
             </items>
         </ChoiceBox>
 
-        <ChoiceBox fx:id="minuti" layoutX="169.0" layoutY="61.0" prefHeight="26.0" prefWidth="67.0" onAction="#selezionaMinuti">
+        <ChoiceBox fx:id="minutiBox" layoutX="169.0" layoutY="61.0" prefHeight="26.0" prefWidth="67.0">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:id="minuti" fx:value="00" />

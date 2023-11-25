@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Initial Configuration: JavaFX">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/ApriFinestraDialogo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SceltaOraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SceltaOraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/FinestraDialogo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/FinestraDialogo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/OperaSullaRegola.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/OperaSullaRegola.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/SceltaOra.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/SceltaOra.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -50,25 +61,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "First-Sprint",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;First-Sprint&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/ifttt" />
@@ -126,6 +138,7 @@
       <workItem from="1700814467684" duration="9569000" />
       <workItem from="1700824487349" duration="2557000" />
       <workItem from="1700832423049" duration="10223000" />
+      <workItem from="1700920504953" duration="2897000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -296,6 +309,29 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/ifttt/RiproduciAudio.java</url>
           <line>59</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogo.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogo.java</url>
+          <line>8</line>
+          <properties class="com.example.ifttt.FinestraDialogo" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java</url>
+          <line>69</line>
+          <properties class="com.example.ifttt.CreaRegolaController" method="apriFinestraSceltaAzioni">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

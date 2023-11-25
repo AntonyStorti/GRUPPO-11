@@ -14,6 +14,6 @@
             </font>
         </Text>
         <TextArea fx:id="testo" layoutX="11.0" layoutY="43.0" prefHeight="143.0" prefWidth="279.0" promptText="Digita il tuo testo..." />
-        <Button fx:id="bottoneInvio" layoutX="113.0" layoutY="215.0" mnemonicParsing="false" onAction="#inviaTesto" prefHeight="26.0" prefWidth="74.0" text="Invia" />
+        <Button fx:id="bottoneInvio" layoutX="113.0" layoutY="215.0" mnemonicParsing="false" onAction="#inviaTesto" prefHeight="26.0" prefWidth="74.0" text="Invia"/>
     </children>
 </AnchorPane>

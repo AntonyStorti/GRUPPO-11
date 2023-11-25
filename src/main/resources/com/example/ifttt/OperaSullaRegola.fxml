@@ -44,7 +44,7 @@
                 <Font name="System Bold" size="15.0" />
             </font>
         </Text>
-        <Button fx:id="inviaButton" layoutX="325.0" layoutY="410.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="64.0" text="Crea">
+        <Button fx:id="inviaButton" layoutX="325.0" layoutY="410.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="64.0" text="Crea" onAction="#creaRegola">
             <font>
                 <Font size="15.0" />
             </font></Button>

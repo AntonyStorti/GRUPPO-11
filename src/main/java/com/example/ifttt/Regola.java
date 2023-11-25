@@ -12,8 +12,6 @@ public class Regola {
     private Trigger t;
     private Azione a;
     private boolean stato;
-    private boolean ripetibile;
-    private Time quiescenza;
     private boolean eseguito;
 
     private static int contatore = 1;
@@ -21,14 +19,12 @@ public class Regola {
 
 
     //-----COSTRUTTORE-----//
-    public Regola(String nome, Trigger t, Azione a, boolean stato, boolean ripetibile, Time quiescenza) {
+    public Regola(String nome, Trigger t, Azione a, boolean stato) {
         this.ID = contatore;
         this.nome = nome ;
         this.t = t;
         this.a = a;
         this.stato = true; //Di default attiva dopo la creazione!
-        this.ripetibile = ripetibile;
-        this.quiescenza = quiescenza;
 
         contatore++;
         eseguito=false;
@@ -84,14 +80,6 @@ public class Regola {
         return stato;
     }
 
-    public Boolean getRipetibile() {
-        return ripetibile;
-    }
-
-    public Time getQuiescenza() {
-        return quiescenza;
-    }
-
     public boolean isEseguito() {
         return eseguito;
     }
@@ -106,14 +94,6 @@ public class Regola {
 
     public void setStato(boolean stato) {
         this.stato = stato;
-    }
-
-    public void setRipetibile(boolean ripetibile) {
-        this.ripetibile = ripetibile;
-    }
-
-    public void setQuiescenza(Time quiescenza) {
-        this.quiescenza = quiescenza;
     }
 
     public void setEseguito(boolean eseguito) {
