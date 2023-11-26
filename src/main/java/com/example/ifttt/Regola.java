@@ -19,7 +19,7 @@ public class Regola {
 
 
     //-----COSTRUTTORE-----//
-    public Regola(String nome, Trigger t, Azione a, boolean stato) {
+    public Regola(String nome, Trigger t, Azione a) {
         this.ID = contatore;
         this.nome = nome ;
         this.t = t;
@@ -99,5 +99,15 @@ public class Regola {
         this.eseguito = eseguito;
     }
 
-
+    @Override
+    public String toString() {
+        return "Regola{" +
+                "ID=" + ID +
+                ", nome='" + nome + '\'' +
+                ", t=" + t +
+                ", a=" + a +
+                ", stato=" + stato +
+                ", eseguito=" + eseguito +
+                '}';
+    }
 }

@@ -4,12 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.Serializable;
-import java.io.*;
 
 
-public class FinestraDialogoController implements Serializable {
+public class FinestraDialogoController {
 
+    public static String messUtente;
 
     @FXML
     private TextArea testo;
@@ -27,15 +26,9 @@ public class FinestraDialogoController implements Serializable {
     @FXML
     public void inviaTesto(){
 
-        String t = testo.getText();
+        String messaggioAllert = testo.getText();
 
-        FinestraDialogo messaggioAllert = new FinestraDialogo(t);
-
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("messaggioAllert.ser"))) {
-            out.writeObject(messaggioAllert);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        messUtente = messaggioAllert;
 
         Stage stage = (Stage) bottoneInvio.getScene().getWindow();
         stage.close();

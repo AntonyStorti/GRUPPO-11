@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Versione Pre-Release">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/ListaRegole.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreRegole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreRegole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SceltaOraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SceltaOraController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +27,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="First-Sprint" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;MiriamVa&quot;
+    }
+  ],
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;AntonyStorti&quot;
+    &quot;assignee&quot;: &quot;MiriamVa&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">
@@ -63,7 +75,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;First-Sprint&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Primo-Sprint&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -132,7 +144,9 @@
       <workItem from="1700814467684" duration="9569000" />
       <workItem from="1700824487349" duration="2557000" />
       <workItem from="1700832423049" duration="10223000" />
-      <workItem from="1700920504953" duration="5252000" />
+      <workItem from="1700920504953" duration="7359000" />
+      <workItem from="1700988246675" duration="817000" />
+      <workItem from="1700989137367" duration="7256000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -278,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700923809374</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Versione Pre-Release">
+      <option name="closed" value="true" />
+      <created>1700925921167</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700925921167</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -11,12 +11,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.FileChooser;
 import java.io.*;
-
-
+import java.time.LocalTime;
 
 
 public class CreaRegolaController {
 
+    public static Regola add;
 
     @FXML
     private ChoiceBox<String> sceltaTrigger;
@@ -27,7 +27,7 @@ public class CreaRegolaController {
     @FXML
     private Button inviaButton;
 
-
+    public String mess;
 
     @FXML
     private void initialize() {
@@ -121,12 +121,14 @@ public class CreaRegolaController {
     }
 
 
+
     @FXML
     private void creaRegola(){
 
         String nome = sceltaNome.getText();
         String selectedTrigger = sceltaTrigger.getValue();
         String selectedAzione = sceltaAzione.getValue();
+
 
 
         //Tipi di Trigger;
@@ -140,32 +142,16 @@ public class CreaRegolaController {
 
         if(selectedTrigger.equals(sceltaOra) && selectedAzione.equals(sceltaMes)) {
 
-            //Recupero l'Azione:
-            FinestraDialogo messaggioAllert = null;
-            try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("messaggioAllert.ser"))) {
-                messaggioAllert = (FinestraDialogo) in.readObject();
-            } catch (IOException | ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+            String messaggio = FinestraDialogoController.messUtente;
+            LocalTime ora = SceltaOraController.orarioScelto;
 
-            //Recupero il Trigger:
-            TempoDelGiorno trigger1 = null;
-            try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("trigger1.ser"))) {
-                trigger1 = (TempoDelGiorno) in.readObject();
-            } catch (IOException | ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+            FinestraDialogo azione1 = new FinestraDialogo(messaggio);
+            TempoDelGiorno trigger1 = new TempoDelGiorno(ora);
 
+            //Crea Regola!!!
+            Regola oraMess = new Regola(nome, trigger1, azione1);
 
-
-            //CREA REGOLA!!!
-            Regola oraMessaggio = new Regola(nome, trigger1, messaggioAllert, true);
-
-
-            File fileMessaggioAllert = new File("messaggioAllert.ser");
-            File fileTrigger1 = new File("trigger1.ser");
-            fileMessaggioAllert.delete();
-            fileTrigger1.delete();
+            add = oraMess;
 
 
             Stage stage = (Stage) inviaButton.getScene().getWindow();
@@ -179,6 +165,7 @@ public class CreaRegolaController {
 
         }
     }
+
 
 }
 

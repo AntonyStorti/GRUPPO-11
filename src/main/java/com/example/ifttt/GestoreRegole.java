@@ -2,10 +2,6 @@ package com.example.ifttt;
 
 import javafx.collections.ObservableList;
 import java.util.logging.Logger;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-
 
 
 public class GestoreRegole implements Runnable {
@@ -14,14 +10,13 @@ public class GestoreRegole implements Runnable {
     private ObservableList<Regola> listaRegole;
     private final int ripetiVerifica = 3;
 
+    Regola r = CreaRegolaController.add;
 
 
-    //---COSTRUTTORE---//
+
     public GestoreRegole(ObservableList<Regola> listaRegole) {
         this.listaRegole = listaRegole;
     }
-    //----------------//
-
 
 
     @Override
@@ -56,8 +51,8 @@ public class GestoreRegole implements Runnable {
 
 
     //-----METODI PER GESTIRE LE REGOLE-----//
-    public void addRegola(Regola nuovaRegola) {
-        listaRegole.add(nuovaRegola);
+    public void addRegola() {
+        listaRegole.add(r);
     }
 
     // Metodo per rimuovere una regola dalla lista

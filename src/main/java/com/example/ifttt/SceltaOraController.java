@@ -12,6 +12,9 @@ import java.time.LocalTime;
 
 public class SceltaOraController {
 
+
+    public static LocalTime orarioScelto;
+
     @FXML
     private ChoiceBox<String> oreBox;
     @FXML
@@ -37,16 +40,8 @@ public class SceltaOraController {
         String orarioCompleto = ora + ":" + minuti;
         LocalTime orario = LocalTime.parse(orarioCompleto);
 
+        orarioScelto = orario;
 
-        //Crea TriggerDelGiorno:
-        TempoDelGiorno trigger1 = new TempoDelGiorno(orario);
-
-
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("trigger1.ser"))) {
-            out.writeObject(trigger1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         Stage stage = (Stage) conferma.getScene().getWindow();
         stage.close();
