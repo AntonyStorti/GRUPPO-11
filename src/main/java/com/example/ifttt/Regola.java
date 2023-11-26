@@ -1,7 +1,5 @@
 package com.example.ifttt;
 
-import java.sql.Time;
-
 
 
 public class Regola {

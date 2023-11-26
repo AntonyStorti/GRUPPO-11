@@ -16,6 +16,7 @@ public class GestoreRegole implements Runnable {
 
     public GestoreRegole(ObservableList<Regola> listaRegole) {
         this.listaRegole = listaRegole;
+        this.listaRegole.add(r);
     }
 
 
@@ -51,7 +52,7 @@ public class GestoreRegole implements Runnable {
 
 
     //-----METODI PER GESTIRE LE REGOLE-----//
-    public void addRegola() {
+    public void addRegola(Regola nuovaRegola) {
         listaRegole.add(r);
     }
 

@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Versione Pre-Release">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/CreaRegolaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/FinestraDialogoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreRegole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreRegole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SceltaOraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SceltaOraController.java" afterDir="false" />
-    </list>
+    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Versione Pre-Release" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +139,7 @@
       <workItem from="1700832423049" duration="10223000" />
       <workItem from="1700920504953" duration="7359000" />
       <workItem from="1700988246675" duration="817000" />
-      <workItem from="1700989137367" duration="7256000" />
+      <workItem from="1700989137367" duration="7278000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -300,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700925921167</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Versione Pre-Release">
+      <option name="closed" value="true" />
+      <created>1701000672020</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701000672020</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
