@@ -3,7 +3,10 @@ package com.example.trigger;
 import com.example.ifttt.Trigger;
 import org.json.JSONObject;
 
-public class TriggerComposto implements Trigger {
+import java.io.Serializable;
+
+
+public class TriggerComposto implements Trigger, Serializable {
 
     Trigger primoTrigger;
     Trigger secondoTrigger;

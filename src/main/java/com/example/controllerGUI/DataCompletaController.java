@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
+
 public class DataCompletaController {
 
     @FXML
@@ -25,13 +26,12 @@ public class DataCompletaController {
 
         dataCompleta.setValue(LocalDate.now());
 
-        // Imposta la factory di celle personalizzata per consentire solo la selezione di giorni futuri
+        // Fai selezionare solo giorni futuri:
         dataCompleta.setDayCellFactory(picker -> new DateCell() {
             @Override
             public void updateItem(LocalDate date, boolean empty) {
                 super.updateItem(date, empty);
 
-                // Disabilita i giorni precedenti al mese corrente
                 setDisable(date.isBefore(LocalDate.now()));
 
                 }
@@ -56,4 +56,5 @@ public class DataCompletaController {
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

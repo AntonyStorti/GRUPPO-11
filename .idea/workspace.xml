@@ -4,7 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint" />
+    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/AggiungiStringa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/AggiungiStringa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioneComposta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioneComposta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioniSuContatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioniSuContatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioniSuFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioniSuFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/CambiaValoreContatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/CambiaValoreContatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/CopiaSposta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/CopiaSposta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/EliminaFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/EliminaFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/EseguiProgramma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/EseguiProgramma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/FinestraDialogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/FinestraDialogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/RiproduciAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/RiproduciAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaContatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaContatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaValoreContatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaValoreContatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/AggiungiStringaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/AggiungiStringaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/CambiaValoreContatoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/CambiaValoreContatoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/ConfrontaContatoriController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/ConfrontaContatoriController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/ConfrontaInteroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/ConfrontaInteroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/CreaRegolaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/CreaRegolaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/DataCompletaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/DataCompletaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/DimensioneFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/DimensioneFileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/ExitStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/ExitStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/FileEsisteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/FileEsisteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/FinestraDialogoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/FinestraDialogoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/GiornoMeseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/GiornoMeseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/GiornoSettimanaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/GiornoSettimanaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Azione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Azione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Contatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Contatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreContatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreContatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreRegole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/GestoreRegole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Regola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SharedMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/SharedMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Trigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ifttt/Trigger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/ConfrontoContatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/ConfrontoContatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/ContatoreIntero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/ContatoreIntero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/DimensioneFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/DimensioneFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/ExitStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/ExitStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/FileEsiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/FileEsiste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TempoDelGiorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TempoDelGiorno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerContatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerContatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerMensile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerMensile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerSettimanale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerSettimanale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerSuData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerSuData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerSuFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerSuFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerTemporali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerTemporali.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +289,7 @@
       <workItem from="1702200124587" duration="1629000" />
       <workItem from="1702214702478" duration="140000" />
       <workItem from="1702214971380" duration="284000" />
-      <workItem from="1702220693721" duration="10569000" />
+      <workItem from="1702220693721" duration="14950000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -571,7 +619,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702238548441</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702238761310</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1702238761310</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

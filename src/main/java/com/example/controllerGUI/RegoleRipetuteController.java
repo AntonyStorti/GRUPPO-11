@@ -24,6 +24,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Collections;
 
+
 public class RegoleRipetuteController {
 
     @FXML
@@ -422,7 +423,7 @@ public class RegoleRipetuteController {
         } else if (selectedItem.equals(sceltaAud)) {
 
             try {
-                // Creare un oggetto FileChooser
+
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Seleziona un file audio (.mp3, .waw, .mp4...)");
                 fileChooser.getExtensionFilters().addAll(
@@ -433,21 +434,19 @@ public class RegoleRipetuteController {
                 File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-                // Verifica se è stato selezionato un file
                 if (fileSelezionato != null) {
-                    // Salva il percorso del file selezionato
                     String percorsoFileAudio = fileSelezionato.getAbsolutePath();
                     tracciaAudio = new RiproduciAudio(percorsoFileAudio);
                 }
 
             } catch (Exception e) {
-                e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+                e.printStackTrace();
             }
 
         } else if (selectedItem.equals(sceltaPro)){
 
             try {
-                // Creare un oggetto FileChooser
+
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Seleziona il programma da eseguire...");
                 fileChooser.getExtensionFilters().addAll(
@@ -458,14 +457,12 @@ public class RegoleRipetuteController {
                 File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-                // Verifica se è stato selezionato un file
                 if (fileSelezionato != null) {
-                    // Salva il percorso del file selezionato
                     String percorsoAPP = fileSelezionato.getAbsolutePath();
                     app = new EseguiProgramma(percorsoAPP);
                 }
             } catch (Exception e) {
-                e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+                e.printStackTrace();
             }
 
         } else if (selectedItem.equals(sceltaStringa)) {
@@ -494,7 +491,7 @@ public class RegoleRipetuteController {
         } else if (selectedItem.equals(sceltaEliminaFile)){
 
             try {
-                // Creare un oggetto FileChooser
+
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Seleziona il file da eliminare...");
                 fileChooser.getExtensionFilters().addAll(
@@ -505,14 +502,12 @@ public class RegoleRipetuteController {
                 File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-                // Verifica se è stato selezionato un file
                 if (fileSelezionato != null) {
-                    // Salva il percorso del file selezionato
                     String percorso = fileSelezionato.getAbsolutePath();
                     path = new EliminaFile(percorso);
                 }
             } catch (Exception e) {
-                e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+                e.printStackTrace();
             }
 
         } else if (selectedItem.equals(sceltaCopiaSposta)) {

@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+
 public class DimensioneFile extends TriggerSuFile {
 
 
     int dimensione;
     String unita;
-
 
 
     public DimensioneFile(String percorso, int dimensione, String unita) {
@@ -27,7 +27,7 @@ public class DimensioneFile extends TriggerSuFile {
 
         try {
 
-            // Ottieni le dimensioni del file in byte
+            // Ottieni le dimensioni del file in byte:
             double dimensioniInByte = Files.size(Path.of(percorso));
 
             if (unita != null) {
@@ -58,6 +58,7 @@ public class DimensioneFile extends TriggerSuFile {
 
     @Override
     public String toString() {
+
         if (unita != null) {
             if (unita.equals("MB")) {
                 return "Se il File è > di " + dimensione + "MB";
@@ -66,19 +67,22 @@ public class DimensioneFile extends TriggerSuFile {
             }
         }
 
-        // Handle the case where DimensioneFileController.unita is null or not "MB" or "KB"
         return "Invalid unit specified";
+
     }
 
 
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("percorso", percorso);
         jsonObject.put("dimensione", dimensione);
         jsonObject.put("unita", unita);
+
         return jsonObject;
+
     }
 
 
@@ -86,4 +90,5 @@ public class DimensioneFile extends TriggerSuFile {
     public String getTipo() {
         return "DimensioneFile";
     }
+
 }

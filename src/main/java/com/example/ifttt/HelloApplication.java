@@ -10,7 +10,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
+
 public class HelloApplication extends Application {
+
     private static Thread threadRulesChecker;
     private static ObservableList<Regola> lista = GestoreRegole.listaRegole;
 
@@ -28,14 +30,18 @@ public class HelloApplication extends Application {
 
     }
 
-    public static void main(String[] args) {
-        //Initialization and start of the thread for automatic condition checking
-        GestoreRegole gr = new GestoreRegole(lista);
 
+    public static void main(String[] args) {
+
+        //Avvia il Thread che si occupa di gestire l'esecuzione delle regole:
+        GestoreRegole gr = new GestoreRegole(lista);
         threadRulesChecker = new Thread(gr);
         threadRulesChecker.setName("Thread Gestore Regole");
         threadRulesChecker.setDaemon(true);
         threadRulesChecker.start();
+
         launch();
+
     }
+
 }

@@ -10,6 +10,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+
 public class CambiaValoreContatoreController {
     @FXML
     public TextField modificaValore;
@@ -22,14 +23,21 @@ public class CambiaValoreContatoreController {
 
     @FXML
     private void initialize() {
+
         inviaButton.setOnAction(event -> cambiaValore());
+
         sceltaContatore.setItems(FXCollections.observableArrayList(GestoreContatori.listaContatori));
+
         modificaValore.textProperty().addListener((observable, oldValue, newValue) -> {
+
             if (!newValue.matches("\\d*")) {
                 modificaValore.setText(newValue.replaceAll("[^\\d]", ""));
+
             }
         });
+
     }
+
 
     public void cambiaValore() {
         Contatore contatore = sceltaContatore.getValue();
@@ -45,4 +53,5 @@ public class CambiaValoreContatoreController {
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

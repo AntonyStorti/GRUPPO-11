@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import java.io.Serializable;
 
+
 public class FinestraDialogo implements Azione, Serializable {
 
 
@@ -21,13 +22,16 @@ public class FinestraDialogo implements Azione, Serializable {
 
     @Override
     public void eseguiAzione() {
+
         Platform.runLater(() -> {
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Messaggio");
             alert.setHeaderText(null);
             alert.setContentText(testoUtente);
 
             alert.showAndWait();
+
         });
 
     }
@@ -40,19 +44,25 @@ public class FinestraDialogo implements Azione, Serializable {
 
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di azione
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("testoUtente", testoUtente);
+
         return jsonObject;
+
     }
 
     public static FinestraDialogo deserialize(JSONObject jsonObject) {
-        // Leggi i dati dal JSONObject e crea un'istanza di FinestraDialogo
+
         String testoUtente = jsonObject.getString("testoUtente");
+
         return new FinestraDialogo(testoUtente);
+
     }
 
     public String getTipo() {
         return "FinestraDialogo";
     }
+
 }

@@ -10,8 +10,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
-public class SorgenteDestinazioneController {
 
+public class SorgenteDestinazioneController {
 
     @FXML
     private Button scegliFileButton;
@@ -42,7 +42,7 @@ public class SorgenteDestinazioneController {
     public void selezionaFile() {
 
         try {
-            // Creare un oggetto FileChooser
+
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Seleziona un file (*.txt)");
             fileChooser.getExtensionFilters().addAll(
@@ -52,16 +52,13 @@ public class SorgenteDestinazioneController {
             Stage stage = (Stage) scegliFileButton.getScene().getWindow();
             File fileSelezionato = fileChooser.showOpenDialog(stage);
 
-
-            // Verifica se è stato selezionato un file
             if (fileSelezionato != null) {
-                // Salva il percorso del file selezionato
                 percorsoFile = fileSelezionato.getAbsolutePath();
                 sharedDataModel.setSorgente(percorsoFile);
             }
 
         } catch (Exception e) {
-            e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            e.printStackTrace();
         }
 
     }
@@ -70,28 +67,24 @@ public class SorgenteDestinazioneController {
 
 
         try {
-            // Creare un oggetto DirectoryChooser
+
             DirectoryChooser directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("Seleziona una cartella");
 
-            // Mostra la finestra di dialogo per la selezione della cartella
             Stage stage = (Stage) cartellaDestinazioneButton.getScene().getWindow();
             File cartellaSelezionata = directoryChooser.showDialog(stage);
 
-            // Verifica se è stata selezionata una cartella
             if (cartellaSelezionata != null) {
-                // Salva il percorso della cartella selezionata
                 destinazione = cartellaSelezionata.getAbsolutePath();
                 sharedDataModel.setDestinazione(destinazione);
             }
 
         } catch (Exception e) {
-            e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            e.printStackTrace();
         }
 
 
     }
-
 
 
     public void invia() {

@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
-public class AggiungiStringaController {
 
+public class AggiungiStringaController {
 
     @FXML
     private Button fileButton;
@@ -33,7 +33,7 @@ public class AggiungiStringaController {
 
     public void scegliFile() {
         try {
-            // Creare un oggetto FileChooser
+
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Seleziona un file di testo (.txt)");
             fileChooser.getExtensionFilters().addAll(
@@ -44,16 +44,15 @@ public class AggiungiStringaController {
             File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-            // Verifica se è stato selezionato un file
             if (fileSelezionato != null) {
-                // Salva il percorso del file selezionato
                 percorsoFile = fileSelezionato.getAbsolutePath();
                 sharedDataModel.setPercorsoFile(percorsoFile);
             }
 
         } catch (Exception e) {
-            e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            e.printStackTrace();
         }
+
     }
 
 
@@ -71,4 +70,5 @@ public class AggiungiStringaController {
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

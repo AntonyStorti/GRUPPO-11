@@ -6,6 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+
 public class TriggerSettimanale extends TriggerTemporali {
 
     private DayOfWeek gSettimana;
@@ -14,6 +15,7 @@ public class TriggerSettimanale extends TriggerTemporali {
         super(tempo);
         this.gSettimana = gSettimana;
     }
+
 
     @Override
     public boolean verificaCondizione() {
@@ -24,6 +26,7 @@ public class TriggerSettimanale extends TriggerTemporali {
         return oggi == gSettimana && oraCorrente.getHour() == tempo.getHour() && oraCorrente.getMinute() == tempo.getMinute();
 
     }
+
 
     @Override
     public String toString() {
@@ -59,16 +62,17 @@ public class TriggerSettimanale extends TriggerTemporali {
         return "Attiva il: " + g;
     }
 
-    /**
-     * @return
-     */
+
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("tempo", tempo.toString());
         jsonObject.put("giornosettimana", gSettimana);
+
         return jsonObject;
+
     }
 
 
@@ -76,4 +80,5 @@ public class TriggerSettimanale extends TriggerTemporali {
     public String getTipo() {
         return "TriggerSettimanale";
     }
+
 }

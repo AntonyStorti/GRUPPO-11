@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
+
 public class DimensioneFileController {
 
     @FXML
@@ -41,7 +42,7 @@ public class DimensioneFileController {
 
 
         try {
-            // Creare un oggetto FileChooser
+
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Seleziona un file (*.txt)");
             fileChooser.getExtensionFilters().addAll(
@@ -52,15 +53,13 @@ public class DimensioneFileController {
             File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-            // Verifica se è stato selezionato un file
             if (fileSelezionato != null) {
-                // Salva il percorso del file selezionato
                 file = fileSelezionato.getAbsolutePath();
                 sharedDataModel.setNomeFile(file);
             }
 
         } catch (Exception e) {
-            e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            e.printStackTrace();
         }
 
 
@@ -80,4 +79,5 @@ public class DimensioneFileController {
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

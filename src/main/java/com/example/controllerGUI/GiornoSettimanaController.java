@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 
 import java.time.DayOfWeek;
 
-public class GiornoSettimanaController {
 
+public class GiornoSettimanaController {
 
     private DayOfWeek giorno;
 

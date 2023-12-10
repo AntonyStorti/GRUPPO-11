@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
+
 public class FileEsisteController {
 
     @FXML
@@ -37,23 +38,20 @@ public class FileEsisteController {
     public void scegliCartella() {
 
         try {
-            // Creare un oggetto DirectoryChooser
+
             DirectoryChooser directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("Seleziona una cartella");
 
-            // Mostra la finestra di dialogo per la selezione della cartella
             Stage stage = (Stage) scegliButton.getScene().getWindow();
             File cartellaSelezionata = directoryChooser.showDialog(stage);
 
-            // Verifica se è stata selezionata una cartella
             if (cartellaSelezionata != null) {
-                // Salva il percorso della cartella selezionata
                 directory = cartellaSelezionata.getAbsolutePath();
                 sharedDataModel.setCartella(directory);
             }
 
         } catch (Exception e) {
-            e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            e.printStackTrace();
         }
 
 

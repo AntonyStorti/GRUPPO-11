@@ -8,12 +8,8 @@ import javafx.stage.Stage;
 
 import java.time.LocalTime;
 
+
 public class SceltaOraController {
-
-
-    private LocalTime orarioScelto;
-
-    private SharedMemory sharedDataModel = new SharedMemory();
 
     @FXML
     private ChoiceBox<String> oreBox;
@@ -22,6 +18,8 @@ public class SceltaOraController {
     @FXML
     private Button conferma;
 
+    private LocalTime orarioScelto;
+    private SharedMemory sharedDataModel = new SharedMemory();
 
 
     @FXML
@@ -30,14 +28,11 @@ public class SceltaOraController {
     }
 
 
-
-
     public void inviaOrario() {
 
         String ora = oreBox.getValue();
         String minuti = minutiBox.getValue();
 
-        //Traforma il LocalTime:
         String orarioCompleto = ora + ":" + minuti;
         orarioScelto = LocalTime.parse(orarioCompleto);
 
@@ -51,4 +46,5 @@ public class SceltaOraController {
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

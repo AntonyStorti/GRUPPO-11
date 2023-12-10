@@ -5,14 +5,17 @@ import org.json.JSONObject;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+
 public class TriggerMensile extends TriggerTemporali {
 
     private LocalDate giornoMese;
+
 
     public TriggerMensile(LocalTime tempo, LocalDate giornoMese) {
         super(tempo);
         this.giornoMese = giornoMese;
     }
+
 
     @Override
     public boolean verificaCondizione() {
@@ -24,6 +27,7 @@ public class TriggerMensile extends TriggerTemporali {
 
     }
 
+
     @Override
     public String toString() {
         return "Attiva questo mese: il " + giornoMese.getDayOfMonth();
@@ -32,11 +36,14 @@ public class TriggerMensile extends TriggerTemporali {
 
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("tempo", tempo.toString());
         jsonObject.put("giornomese", giornoMese);
+
         return jsonObject;
+
     }
 
 
@@ -44,4 +51,5 @@ public class TriggerMensile extends TriggerTemporali {
     public String getTipo() {
         return "TriggerMensile";
     }
+
 }

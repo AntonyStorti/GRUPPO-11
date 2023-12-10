@@ -7,6 +7,8 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+
+
 public class SharedMemory {
 
     private LocalTime orarioScelto;
@@ -293,4 +295,5 @@ public class SharedMemory {
     public void setContatoreSomma2(Contatore contatoreSomma2) {
         this.contatoreSomma2 = contatoreSomma2;
     }
+
 }

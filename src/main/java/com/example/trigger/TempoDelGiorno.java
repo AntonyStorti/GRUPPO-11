@@ -5,16 +5,12 @@ import org.json.JSONObject;
 import java.time.LocalTime;
 
 
-
 public class TempoDelGiorno extends TriggerTemporali {
 
 
-
-    //-----COSTRUTTORE-----//
     public TempoDelGiorno(LocalTime tempo) {
         super(tempo);
     }
-    //---------------------//
 
 
 
@@ -41,9 +37,13 @@ public class TempoDelGiorno extends TriggerTemporali {
 
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("tempo", tempo.toString());
+
         return jsonObject;
+
     }
+
 }

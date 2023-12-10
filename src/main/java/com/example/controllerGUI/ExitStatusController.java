@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
+
 public class ExitStatusController {
 
 
@@ -38,7 +39,7 @@ public class ExitStatusController {
     public void scegliAPP() {
 
         try {
-            // Creare un oggetto FileChooser
+
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Seleziona il programma da eseguire...");
             fileChooser.getExtensionFilters().addAll(
@@ -49,14 +50,12 @@ public class ExitStatusController {
             File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-            // Verifica se è stato selezionato un file
             if (fileSelezionato != null) {
-                // Salva il percorso del file selezionato
                 String percorsoAPP = fileSelezionato.getAbsolutePath();
                 sharedDataModel.setPercorsoAPP(percorsoAPP);
             }
         } catch (Exception e) {
-            e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            e.printStackTrace();
         }
 
     }

@@ -9,7 +9,9 @@ import javafx.stage.Stage;
 
 import java.time.Duration;
 
+
 public class IbernazioneController {
+
     @FXML
     private TextField GiorniText;
     @FXML
@@ -18,8 +20,8 @@ public class IbernazioneController {
     private ChoiceBox MinutiBox;
     @FXML
     private Button SalvaButton;
-
     public Duration periodoIbernazione;
+
     private SharedMemory sharedDataModel = new SharedMemory();
 
 
@@ -28,17 +30,17 @@ public class IbernazioneController {
     private void initialize() {
         GiorniText.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*")) {
-                // Se l'input non è un numero intero, sostituisci il testo con l'input valido precedentemente
                 GiorniText.setText(oldValue);
             }
         });
         SalvaButton.setOnAction(event -> salvaImpostazioni());
     }
+
     public IbernazioneController() {}
+
     public IbernazioneController(Duration periodoIbernazione) {
         this.periodoIbernazione = periodoIbernazione;
     }
-
 
 
 
@@ -58,6 +60,7 @@ public class IbernazioneController {
 
         Stage stage = (Stage) SalvaButton.getScene().getWindow();
         stage.close();
+
     }
 
 
@@ -67,9 +70,9 @@ public class IbernazioneController {
     }
 
 
-
     @Override
     public String toString() {
         return String.valueOf(periodoIbernazione.toDays()) + "g " + String.valueOf(periodoIbernazione.toHoursPart()) + "h " + String.valueOf(periodoIbernazione.toMinutesPart()) + "m";
     }
+
 }

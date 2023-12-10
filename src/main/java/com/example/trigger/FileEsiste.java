@@ -6,8 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class FileEsiste extends TriggerSuFile {
 
+public class FileEsiste extends TriggerSuFile {
 
     String nomeFile;
 
@@ -17,10 +17,11 @@ public class FileEsiste extends TriggerSuFile {
         this.nomeFile = nomeFile;
     }
 
+
     @Override
     public boolean verificaCondizione() {
 
-        // Costruisci il percorso completo del file
+        // Ricostruisci il percorso completo del file:
         Path percorsoCompleto = Paths.get(percorso, nomeFile);
 
         return Files.exists(percorsoCompleto);
@@ -37,11 +38,14 @@ public class FileEsiste extends TriggerSuFile {
 
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("percorso", percorso);
         jsonObject.put("nomefile", nomeFile);
+
         return jsonObject;
+
     }
 
 

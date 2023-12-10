@@ -8,10 +8,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 
+
 public class RiproduciAudio implements Azione, Serializable {
 
 
     private String traccia;
+
 
     public RiproduciAudio(String traccia) {
         this.traccia = traccia;
@@ -25,7 +27,7 @@ public class RiproduciAudio implements Azione, Serializable {
         if (traccia != null) {
 
             try {
-                // Ottieni il file audio dal percorso
+
                 File fileAudio = new File(traccia);
 
                 // Crea un AudioInputStream dal file audio
@@ -34,13 +36,13 @@ public class RiproduciAudio implements Azione, Serializable {
                 // Ottieni il formato dell'audio
                 AudioFormat audioFormat = audioInputStream.getFormat();
 
-                // Crea una sorgente dati per l'audio
+                // Crea una sorgente dati per leggere l'audio:
                 DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, audioFormat);
                 SourceDataLine sourceDataLine = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
                 sourceDataLine.open(audioFormat);
                 sourceDataLine.start();
 
-                // Leggi e riproduci l'audio
+                // Riproduci l'audio:
                 byte[] buffer = new byte[4096];
                 int bytesRead;
 
@@ -53,7 +55,9 @@ public class RiproduciAudio implements Azione, Serializable {
                 sourceDataLine.close();
 
             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+
                 e.printStackTrace();
+
             }
 
         }
@@ -61,26 +65,34 @@ public class RiproduciAudio implements Azione, Serializable {
 
     }
 
+
+    @Override
+    public JSONObject toJSONObject() {
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("tipo", getTipo());
+        jsonObject.put("traccia", traccia);
+
+        return jsonObject;
+
+    }
+
+    public static RiproduciAudio deserialize(JSONObject jsonObject) {
+
+        String traccia = jsonObject.getString("traccia");
+
+        return new RiproduciAudio(traccia);
+
+    }
+
+
+    public String getTipo() {
+        return "RiproduciAudio";
+    }
+
     @Override
     public String toString() {
         return "Riproduci File Audio";
     }
 
-    @Override
-    public JSONObject toJSONObject() {
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di azione
-        jsonObject.put("traccia", traccia);
-        return jsonObject;
-    }
-    // Metodo statico di fabbrica per deserializzare RiproduciAudio
-    public static RiproduciAudio deserialize(JSONObject jsonObject) {
-        // Leggi i dati dal JSONObject e crea un'istanza di RiproduciAudio
-        String traccia = jsonObject.getString("traccia");
-        return new RiproduciAudio(traccia);
-    }
-    // Metodo astratto per ottenere il tipo dell'azione
-    public String getTipo() {
-        return "RiproduciAudio";
-    }
 }

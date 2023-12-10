@@ -9,7 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
+
 public class SommaContatoriController {
+
     @FXML
     public ChoiceBox<Contatore> primoContatore;
     @FXML
@@ -27,6 +29,7 @@ public class SommaContatoriController {
     }
 
     public void sommaContatori() {
+
         Contatore primoC = primoContatore.getValue();
         Contatore secondoC = secondoContatore.getValue();
 
@@ -35,9 +38,11 @@ public class SommaContatoriController {
 
         Stage stage = (Stage) sommaContatoriButton.getScene().getWindow();
         stage.close();
+
     }
 
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

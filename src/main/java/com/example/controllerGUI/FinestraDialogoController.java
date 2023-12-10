@@ -19,7 +19,6 @@ public class FinestraDialogoController {
     private Button bottoneInvio;
 
 
-
     @FXML
     private void initialize(){
         bottoneInvio.setOnAction(event -> inviaTesto());

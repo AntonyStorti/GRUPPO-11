@@ -5,12 +5,11 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+
 public class ExitStatus implements Trigger {
 
     String percorso;
     Integer exitStatus;
-
-
 
 
     public ExitStatus(String percorso, Integer exitStatus) {
@@ -23,7 +22,6 @@ public class ExitStatus implements Trigger {
     @Override
     public boolean verificaCondizione() {
 
-
         ProcessBuilder processBuilder = new ProcessBuilder(percorso);
 
         try {
@@ -31,14 +29,8 @@ public class ExitStatus implements Trigger {
             Process process = processBuilder.start();
             int exitCode = process.waitFor();
 
-            // Stampare lo stato di uscita
-            System.out.println("Stato di uscita: " + exitCode);
 
-
-            if (exitStatus.equals(exitCode))
-                return true;
-            else
-                return false;
+            return exitStatus.equals(exitCode);
 
 
         } catch (IOException | InterruptedException e) {
@@ -52,11 +44,14 @@ public class ExitStatus implements Trigger {
 
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("percorso", percorso);
         jsonObject.put("exitStatus", exitStatus);
+
         return jsonObject;
+
     }
 
 

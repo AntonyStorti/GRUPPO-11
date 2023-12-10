@@ -10,7 +10,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+
 public class SommaValoreContatoreController {
+
     @FXML
     public TextField aggiungiValore;
     @FXML
@@ -22,16 +24,21 @@ public class SommaValoreContatoreController {
 
     @FXML
     private void initialize() {
+
         inviaButton.setOnAction(event -> sommaValore());
+
         sceltaContatore.setItems(FXCollections.observableArrayList(GestoreContatori.listaContatori));
+
         aggiungiValore.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*")) {
                 aggiungiValore.setText(newValue.replaceAll("[^\\d]", ""));
             }
         });
+
     }
 
     public void sommaValore() {
+
         Contatore contatore = sceltaContatore.getValue();
         Integer valoreDaSommare = Integer.valueOf(aggiungiValore.getText());
 
@@ -40,9 +47,11 @@ public class SommaValoreContatoreController {
 
         Stage stage = (Stage) inviaButton.getScene().getWindow();
         stage.close();
+
     }
 
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

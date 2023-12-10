@@ -9,17 +9,22 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+
 public class ModificaContatoreController {
+
     @FXML
     public TextField nuovoValoreC;
     @FXML
     public Button nuovoValoreCButton;
 
     private SharedMemory sharedDataModel = new SharedMemory();
+
     private HelloController helloController = new HelloController();
+
 
     @FXML
     private void initialize() {
+
         nuovoValoreCButton.setOnAction(event -> inviaNuovoValoreC());
 
         nuovoValoreC.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -27,24 +32,27 @@ public class ModificaContatoreController {
                 nuovoValoreC.setText(newValue.replaceAll("[^\\d]", ""));
             }
         });
+
     }
+
     public void inviaNuovoValoreC() {
+
         Integer nuovoValoreCont = Integer.valueOf(nuovoValoreC.getText());
-        System.out.println(nuovoValoreCont);
         TableView<Contatore> tabellaContatori = sharedDataModel.getTabellaContatori();
         Contatore c = tabellaContatori.getSelectionModel().getSelectedItem();
+
         int i = tabellaContatori.getSelectionModel().getSelectedIndex();
+
         if (c != null) {
-            // Rimuovi dalla tabella
+
             Contatore nuovoC = new Contatore(c.getNome(), nuovoValoreCont);
             tabellaContatori.getItems().set(i, nuovoC);
 
-            // Rimuovi dalla lista di GestoreRegole
             GestoreContatori.listaContatori.set(i, nuovoC);
 
-            // Rimuovi dal file JSON
             helloController.salvaContatoriSuFile();
         }
+
         Stage stage = (Stage) nuovoValoreCButton.getScene().getWindow();
         stage.close();
 
@@ -53,4 +61,5 @@ public class ModificaContatoreController {
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

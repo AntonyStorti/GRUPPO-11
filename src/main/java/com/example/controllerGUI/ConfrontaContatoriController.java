@@ -9,7 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
+
 public class ConfrontaContatoriController {
+
     @FXML
     public ChoiceBox<Contatore> primoContatore;
     @FXML
@@ -21,6 +23,7 @@ public class ConfrontaContatoriController {
 
     private SharedMemory sharedDataModel = new SharedMemory();
 
+
     @FXML
     private void initialize() {
 
@@ -31,8 +34,9 @@ public class ConfrontaContatoriController {
 
     }
 
+
     public void confrontaContatori() {
-        System.out.println(GestoreContatori.listaContatori);
+
         Contatore contatore1 = primoContatore.getValue();
         String opera = (String) operazione.getValue();
         Contatore contatore2 = secondoContatore.getValue();
@@ -44,9 +48,11 @@ public class ConfrontaContatoriController {
 
         Stage stage = (Stage) confrontaContatoriButton.getScene().getWindow();
         stage.close();
+
     }
 
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

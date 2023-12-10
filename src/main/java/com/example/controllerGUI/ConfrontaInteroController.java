@@ -10,6 +10,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+
 public class ConfrontaInteroController {
 
 
@@ -37,16 +38,13 @@ public class ConfrontaInteroController {
 
     public void creaTrigger() {
 
-        System.out.println(GestoreContatori.listaContatori);
         Contatore contatore = sceltaContatore.getValue();
         Integer valore = Integer.valueOf(intero.getText());
         String opera = (String) operazione.getValue();
 
-
         sharedDataModel.setContatore(contatore);
         sharedDataModel.setIntero(valore);
         sharedDataModel.setOperazione(opera);
-
 
         Stage stage = (Stage) inviaButton.getScene().getWindow();
         stage.close();

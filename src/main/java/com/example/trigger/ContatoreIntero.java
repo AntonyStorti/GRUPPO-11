@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 import java.util.Objects;
 
+
 public class ContatoreIntero extends TriggerContatori{
 
     Integer valore;
@@ -15,6 +16,7 @@ public class ContatoreIntero extends TriggerContatori{
         this.valore = valore;
         this.confronto = confronto;
     }
+
 
     @Override
     public boolean verificaCondizione() {
@@ -44,12 +46,15 @@ public class ContatoreIntero extends TriggerContatori{
 
     @Override
     public JSONObject toJSONObject() {
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("tipo", getTipo());
         jsonObject.put("contatore", contatore.toJSONObject());
         jsonObject.put("valore", valore);
         jsonObject.put("confronto", confronto);
+
         return jsonObject;
+
     }
 
     @Override

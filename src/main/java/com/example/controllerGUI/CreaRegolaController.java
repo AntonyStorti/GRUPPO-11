@@ -21,6 +21,7 @@ import java.time.*;
 import java.util.Collections;
 
 
+
 public class CreaRegolaController {
 
 
@@ -117,6 +118,7 @@ public class CreaRegolaController {
     public void setHelloController(HelloController helloController) {
         this.helloController = helloController;
     }
+
 
     public void apriFinestraSceltaTrigger() {
 
@@ -380,7 +382,7 @@ public class CreaRegolaController {
         } else if (selectedItem.equals(sceltaAud)) {
 
             try {
-                // Creare un oggetto FileChooser
+
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Seleziona un file audio (.mp3, .waw, .mp4...)");
                 fileChooser.getExtensionFilters().addAll(
@@ -391,21 +393,20 @@ public class CreaRegolaController {
                 File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-                // Verifica se è stato selezionato un file
                 if (fileSelezionato != null) {
-                    // Salva il percorso del file selezionato
+
                     String percorsoFileAudio = fileSelezionato.getAbsolutePath();
                     tracciaAudio = new RiproduciAudio(percorsoFileAudio);
                 }
 
             } catch (Exception e) {
-                e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+                e.printStackTrace();
             }
 
         } else if (selectedItem.equals(sceltaPro)){
 
             try {
-                // Creare un oggetto FileChooser
+
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Seleziona il programma da eseguire...");
                 fileChooser.getExtensionFilters().addAll(
@@ -415,15 +416,13 @@ public class CreaRegolaController {
                 Stage stage = (Stage) sceltaAzione.getScene().getWindow();
                 File fileSelezionato = fileChooser.showOpenDialog(stage);
 
-
-                // Verifica se è stato selezionato un file
                 if (fileSelezionato != null) {
-                    // Salva il percorso del file selezionato
+
                     String percorsoAPP = fileSelezionato.getAbsolutePath();
                     app = new EseguiProgramma(percorsoAPP);
                 }
             } catch (Exception e) {
-                e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+                e.printStackTrace();
             }
 
         } else if (selectedItem.equals(sceltaStringa)) {
@@ -452,7 +451,7 @@ public class CreaRegolaController {
         } else if (selectedItem.equals(sceltaEliminaFile)){
 
             try {
-                // Creare un oggetto FileChooser
+
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Seleziona il file da eliminare...");
                 fileChooser.getExtensionFilters().addAll(
@@ -463,14 +462,12 @@ public class CreaRegolaController {
                 File fileSelezionato = fileChooser.showOpenDialog(stage);
 
 
-                // Verifica se è stato selezionato un file
                 if (fileSelezionato != null) {
-                    // Salva il percorso del file selezionato
                     String percorso = fileSelezionato.getAbsolutePath();
                     path = new EliminaFile(percorso);
                 }
             } catch (Exception e) {
-                e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+                e.printStackTrace();
             }
 
         } else if (selectedItem.equals(sceltaCopiaSposta)) {
@@ -638,6 +635,7 @@ public class CreaRegolaController {
         }
 
         Regola r = null;
+
         if (ripetibile.isSelected()) {
 
             r = new Regola(nome, t, a, true, false, true, periodoIbernazione, Instant.EPOCH);
@@ -657,6 +655,7 @@ public class CreaRegolaController {
 
         Stage stage = (Stage) inviaButton.getScene().getWindow();
         stage.close();
+
     }
 
 

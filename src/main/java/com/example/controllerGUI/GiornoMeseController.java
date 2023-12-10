@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
+
 public class GiornoMeseController {
 
     @FXML
@@ -26,7 +27,7 @@ public class GiornoMeseController {
 
         giornoMese.setValue(LocalDate.now());
 
-        // Imposta la factory di celle personalizzata per consentire solo la selezione di giorni futuri
+        // Consentire solo la selezione di giorni futuri:
         giornoMese.setDayCellFactory(picker -> new DateCell() {
             @Override
             public void updateItem(LocalDate date, boolean empty) {
@@ -61,4 +62,5 @@ public class GiornoMeseController {
     public void setSharedDataModel(SharedMemory sharedDataModel) {
         this.sharedDataModel = sharedDataModel;
     }
+
 }

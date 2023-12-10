@@ -3,7 +3,11 @@ package com.example.azioni;
 import com.example.ifttt.Azione;
 import org.json.JSONObject;
 
-public class AzioneComposta implements Azione {
+import java.io.Serializable;
+
+
+public class AzioneComposta implements Azione, Serializable {
+
 
     private Azione primaAzione;
     private Azione secondaAzione;

@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 public class HelloController {
 
     @FXML
@@ -85,6 +86,7 @@ public class HelloController {
 
     @FXML
     private void initialize() {
+
         idRegola.setCellValueFactory(new PropertyValueFactory<>("ID"));
         nomeRegola.setCellValueFactory(new PropertyValueFactory<>("nome"));
         triggerRegola.setCellValueFactory(new PropertyValueFactory<>("trigger"));
@@ -100,7 +102,7 @@ public class HelloController {
         eliminaRegolaButton.setOnAction(event -> eliminaRegola());
         compostaButton.setOnAction(event -> creaRegolaComposta());
 
-        // Crea un timeline per l'aggiornamento periodico
+        // Crea un timeline per l'aggiornamento della tabella:
         Timeline refreshTabella = new Timeline(new KeyFrame(Duration.millis(250), event -> tabellaRegole.refresh()));
         refreshTabella.setCycleCount(Timeline.INDEFINITE);
         refreshTabella.play();
@@ -131,6 +133,8 @@ public class HelloController {
 
     }
 
+
+
     @FXML
     private void apriFinestraCreazioneRegola() {
         try {
@@ -145,7 +149,7 @@ public class HelloController {
 
             stage.show();
         } catch (Exception e) {
-            e.printStackTrace(); // Gestisci l'eccezione in modo adeguato
+            e.printStackTrace();
         }
     }
 
@@ -154,43 +158,42 @@ public class HelloController {
         Regola r = tabellaRegole.getSelectionModel().getSelectedItem();
 
         if (r != null) {
-            // Rimuovi dalla tabella
+
             tabellaRegole.getItems().remove(r);
 
-            // Rimuovi dalla lista di GestoreRegole
             GestoreRegole.listaRegole.remove(r);
 
             for (int i = tabellaRegole.getSelectionModel().getSelectedIndex() + 1; i < tabellaRegole.getItems().size(); i++) {
 
                 Regola regolaSuccessiva = tabellaRegole.getItems().get(i);
                 regolaSuccessiva.setID(regolaSuccessiva.getID() - 1);
-                // Aggiorna la lista
+
                 GestoreRegole.listaRegole.set(i, regolaSuccessiva);
 
             }
-            System.out.println(GestoreRegole.listaRegole);
 
-            // Rimuovi dal file JSON
             rimuoviRegolaDaFile(r);
+
         }
     }
 
 
     private void rimuoviRegolaDaFile(Regola regolaDaRimuovere) {
+
         Path filePath = Paths.get("ListaRegole.json");
 
         try {
-            // Leggi il contenuto del file JSON specificando la codifica UTF-8
+
             String fileContent = new String(Files.readAllBytes(filePath), StandardCharsets.UTF_8);
 
-            // Crea un oggetto JSONObject dal contenuto del file
             JSONObject jsonContainer = new JSONObject(fileContent);
 
-            // Estrai l'array di regole dal JSONObject
             JSONArray jsonArray = jsonContainer.getJSONArray("regole");
 
-            // Trova e rimuovi la regola dal JSONArray
+            // Trova e rimuovi la regola dal JSONArray:
+
             for (int i = 0; i < jsonArray.length(); i++) {
+
                 JSONObject jsonRegola = jsonArray.getJSONObject(i);
                 Regola regola = deserializeRegola(jsonRegola);
 
@@ -215,34 +218,38 @@ public class HelloController {
 
                     // Esci dal loop dopo aver rimosso e aggiornato gli ID
                     break;
+
                 }
             }
 
             // Sovrascrivi il file JSON con il JSONArray aggiornato
             Files.write(filePath, jsonContainer.toString(2).getBytes(StandardCharsets.UTF_8));
 
-            // Verifica che la lista di regole sia aggiornata correttamente
-            System.out.println("ListaRegole dopo la rimozione: " + GestoreRegole.listaRegole.toString());
-
-            System.out.println("Regola rimossa con successo dal file JSON.");
-
         } catch (IOException e) {
-            e.printStackTrace();
+
             System.err.println("Errore durante la rimozione della regola dal file JSON.");
+            e.printStackTrace();
+
         }
     }
 
 
     public void aggiornaTabella(List<Regola> nuoveRegole) {
+
         ObservableList<Regola> observableList = FXCollections.observableArrayList(nuoveRegole);
         tabellaRegole.getItems().addAll(observableList);
+
     }
 
 
     public void attivaDisattiva() {
+
         Regola r;
+
         if (tabellaRegole.getSelectionModel().selectedItemProperty().isNotNull().get()) {
+
             r = tabellaRegole.getSelectionModel().getSelectedItem();
+
             if (r.getStato() == "Attiva") {
                 r.setStato(false);
             }
@@ -257,20 +264,21 @@ public class HelloController {
     }
 
     public void modificaStatoRegolaSuFile(Regola regolaDaModificare) {
+
         Path filePath = Paths.get("ListaRegole.json");
 
         try {
-            // Leggi il contenuto del file JSON specificando la codifica UTF-8
+
             String fileContent = new String(Files.readAllBytes(filePath), StandardCharsets.UTF_8);
 
-            // Crea un oggetto JSONObject dal contenuto del file
             JSONObject jsonContainer = new JSONObject(fileContent);
 
-            // Estrai l'array di regole dal JSONObject
             JSONArray jsonArray = jsonContainer.getJSONArray("regole");
 
-            // Trova e rimuovi la regola dal JSONArray
+            // Trova e rimuovi la regola dal JSONArray:
+
             for (int i = 0; i < jsonArray.length(); i++) {
+
                 JSONObject jsonRegola = jsonArray.getJSONObject(i);
                 Regola regola = deserializeRegola(jsonRegola);
 
@@ -286,6 +294,7 @@ public class HelloController {
                     break;
                 }
             }
+
             Files.write(filePath, jsonContainer.toString(2).getBytes(StandardCharsets.UTF_8));
 
         } catch (IOException ex) {
@@ -296,40 +305,36 @@ public class HelloController {
 
 
     private void caricaDatiDaFile() {
+
         tabellaRegole.getItems().clear();
 
         Path filePath = Paths.get("ListaRegole.json");
 
         try {
-            // Leggi il contenuto del file JSON
+
             String fileContent = new String(Files.readAllBytes(filePath));
-
-            // Crea un oggetto JSONObject dal contenuto del file
             JSONObject jsonContainer = new JSONObject(fileContent);
-
-            // Estrai l'array di regole dal JSONObject
             JSONArray jsonArray = jsonContainer.getJSONArray("regole");
 
-            // Crea una lista di regole
             List<Regola> regole = new ArrayList<>();
 
-            // Itera sull'array e crea oggetti Regola
+            // Itera sull'array e crea oggetti Regola:
+
             for (int i = 0; i < jsonArray.length(); i++) {
+
                 JSONObject jsonRegola = jsonArray.getJSONObject(i);
                 Regola regola = deserializeRegola(jsonRegola);
-                // Aggiungi la regola alla lista
                 regole.add(regola);
+
             }
+
             GestoreRegole.listaRegole.addAll(regole);
 
-            // Associa le colonne ai campi degli oggetti Regola
+            // Associa le colonne ai campi degli oggetti Regola:
             idRegola.setCellValueFactory(new PropertyValueFactory<>("ID"));
             nomeRegola.setCellValueFactory(new PropertyValueFactory<>("nome"));
-
-            // Personalizza le celle per Trigger e Azione
             triggerRegola.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getTrigger()));
             azioneRegola.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getAzione()));
-
             ripetibilita.setCellValueFactory(new PropertyValueFactory<>("ripetibile"));
             stato.setCellValueFactory(new PropertyValueFactory<>("stato"));
 
@@ -339,35 +344,42 @@ public class HelloController {
     }
 
     private Regola deserializeRegola(JSONObject jsonRegola) {
+
         int id = jsonRegola.getInt("ID");
         String nome = jsonRegola.getString("nome");
         boolean stato = jsonRegola.getBoolean("stato");
         boolean eseguito = jsonRegola.getBoolean("eseguito");
 
-        // Deserializza il Trigger
+        // Deserializza il Trigger:
         JSONObject jsonTrigger = jsonRegola.optJSONObject("trigger");
         Trigger trigger = deserializeTrigger(jsonTrigger);
 
-        // Deserializza l'Azione
+        // Deserializza l'Azione:
         JSONObject jsonAzione = jsonRegola.optJSONObject("azione");
         Azione azione = deserializeAzione(jsonAzione);
 
         boolean ripetibile = jsonRegola.getBoolean("ripetibile");
+
         Regola regola = null;
+
         if (ripetibile) {
+
             String p = jsonRegola.getString("ibernazione");
             java.time.Duration periodoIbernazione = java.time.Duration.parse(p);
 
             String w = jsonRegola.getString("ultimaEsecuzione");
             Instant ultimaEsecuzione;
-            if(w!= null)
+
+            if (w!= null)
                 ultimaEsecuzione = Instant.parse(w);
             else
                 ultimaEsecuzione = Instant.EPOCH;
+
             regola = new Regola(id, nome, trigger, azione, stato, eseguito, ripetibile, periodoIbernazione, ultimaEsecuzione);
+
         }
         else
-            // Chiamata al nuovo costruttore con ID
+
             regola = new Regola(id, nome, trigger, azione, stato, eseguito);
 
         regola.setStato(stato);
@@ -381,7 +393,6 @@ public class HelloController {
         String tipoTrigger = jsonTrigger.getString("tipo");
 
         if ("TempoDelGiorno".equals(tipoTrigger)) {
-            // Deserializza il TempoDelGiorno
             LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
             return new TempoDelGiorno(tempo);
         }
@@ -437,15 +448,15 @@ public class HelloController {
         return null;
     }
 
+
     private Azione deserializeAzione(JSONObject jsonAzione) {
+
         String tipoAzione = jsonAzione.getString("tipo");
 
         if ("FinestraDialogo".equals(tipoAzione)) {
-            // Deserializza la FinestraDialogo
             return FinestraDialogo.deserialize(jsonAzione);
         }
         if ("RiproduciAudio".equals(tipoAzione)) {
-            // Deserializza il RiproduciAudio
             return RiproduciAudio.deserialize(jsonAzione);
         }
         if ("AggiungiStringa".equals(tipoAzione)) {
@@ -469,76 +480,76 @@ public class HelloController {
         if("SommaContatori".equals(tipoAzione)) {
             return SommaContatori.deserialize(jsonAzione);
         }
-        // Se nessuna corrispondenza, potresti restituire null o generare un'eccezione a seconda della tua logica.
+
         return null;
+
     }
 
     @FXML
     private void creaContatore() {
+
         String nome = nomeContatore.getText();
         Integer valore = Integer.parseInt(valoreContatore.getText());
 
-        // Crea un nuovo contatore
         Contatore nuovoContatore = new Contatore(nome, valore);
 
-        // Aggiungi il nuovo contatore alla lista
         GestoreContatori.listaContatori.add(nuovoContatore);
 
-        // Salva tutti i contatori nel file
         salvaContatoriSuFile();
 
-        // Pulisci i campi di testo
         nomeContatore.clear();
         valoreContatore.clear();
 
     }
 
+
     private void caricaContatoriDaFile() {
+
         Path path = Paths.get("contatori.dat");
 
         try (ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(path))) {
-            // Leggi la lista di contatori direttamente dal file
+
             List<Contatore> contatori = (List<Contatore>) ois.readObject();
             GestoreContatori.listaContatori.addAll(contatori);
-            System.out.println("Contatori caricati con successo!");
-            System.out.println(GestoreContatori.listaContatori);
+
         } catch (IOException | ClassNotFoundException e) {
-            // Gestire le eccezioni, ad esempio, se il file non esiste
+
             System.err.println("Errore durante il caricamento dei contatori: " + e.getMessage());
             e.printStackTrace();
+
         }
     }
 
 
 
     private void initTabellaContatori() {
-        // Inizializza la tabella e le colonne
+
         colonnaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colonnaValore.setCellValueFactory(new PropertyValueFactory<>("valore"));
 
         // Aggiungi i contatori alla tabella
         tabellaContatori.setItems(GestoreContatori.listaContatori);
 
-        // Aggiungi un listener per gestire le modifiche ai contatori
+        // Aggiungi un listener per gestire le modifiche ai contatori:
         tabellaContatori.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            if (newSelection != null) {
-                // Puoi gestire la selezione del contatore qui
-                System.out.println("Contatore selezionato: " + newSelection);
-            }
         });
     }
 
 
     public void salvaContatoriSuFile() {
+
         Path path = Paths.get("contatori.dat");
 
         try (ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(path))) {
-            // Salva la lista di contatori nel file
+
             List<Contatore> contatori = new ArrayList<>(GestoreContatori.listaContatori);
             oos.writeObject(contatori);
+
         } catch (IOException e) {
+
             System.err.println("Errore durante la scrittura sul file: " + e.getMessage());
             e.printStackTrace();
+
         }
     }
 
@@ -546,13 +557,10 @@ public class HelloController {
         Contatore c = tabellaContatori.getSelectionModel().getSelectedItem();
 
         if (c != null) {
-            // Rimuovi dalla tabella
-            tabellaContatori.getItems().remove(c);
 
-            // Rimuovi dalla lista di GestoreRegole
+            tabellaContatori.getItems().remove(c);
             GestoreContatori.listaContatori.remove(c);
 
-            // Rimuovi dal file JSON
             salvaContatoriSuFile();
         }
     }
@@ -567,14 +575,13 @@ public class HelloController {
             stage.setTitle("Scegli il nuovo valore del contatore...");
             stage.setScene(new Scene(root));
             sharedDataModel.setTabellaContatori(tabellaContatori);
-            /*stage.setOnHidden(event -> {
-                nuovoValoreC = sharedDataModel.getNuovoValoreContatore();
-
-            });*/
 
             stage.show();
+
         } catch (Exception e) {
+
             e.printStackTrace();
+
         }
 
     }

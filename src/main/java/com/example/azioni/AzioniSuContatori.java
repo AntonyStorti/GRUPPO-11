@@ -6,7 +6,10 @@ import org.json.JSONObject;
 
 import java.io.Serializable;
 
+
+
 public abstract class AzioniSuContatori implements Azione, Serializable {
+
 
     Contatore contatore;
 
@@ -14,7 +17,10 @@ public abstract class AzioniSuContatori implements Azione, Serializable {
         this.contatore = contatore;
     }
 
+
+
     public abstract JSONObject toJSONObject();
 
     public abstract String getTipo();
+
 }
