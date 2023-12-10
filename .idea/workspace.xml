@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint" />
+    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListaRegole.json" beforeDir="false" afterPath="$PROJECT_DIR$/ListaRegole.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contatori.dat" beforeDir="false" afterPath="$PROJECT_DIR$/contatori.dat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +55,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -66,7 +73,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
+    "Application.HelloApplication.executor": "Debug",
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.RegolaTest.testValutaEsecuzioneTriggerNonVerificato.executor": "Run",
     "OverrideImplement.generate.javadoc": "true",
@@ -235,7 +242,8 @@
       <workItem from="1702045521856" duration="620000" />
       <workItem from="1702046385676" duration="4026000" />
       <workItem from="1702118219084" duration="22579000" />
-      <workItem from="1702200124587" duration="1089000" />
+      <workItem from="1702200124587" duration="1629000" />
+      <workItem from="1702214702478" duration="140000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -437,7 +445,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702201116977</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702201278388</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702201278388</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +469,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Terzo-Sprint" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

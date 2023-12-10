@@ -65,7 +65,6 @@ public class CreaRegolaController {
     private Contatore contatore1;
     private String confronto2;
     private Contatore contatore2;
-
     private Contatore contatoreDaAggiornare;
     private Integer nuovoValore;
     private Contatore contatorePiuIntero;
@@ -85,6 +84,7 @@ public class CreaRegolaController {
     private String sceltaData = "Seleziona una data";
     private String esisteFile = "Se esiste un File";
     private String dimFile = "Se la dimensione del file è > di";
+    private String exitStatus = "Se un programma ha 'Exist status':";
     private String contatoreInt = "Confronta un contatore con intero";
     private String confrontaContatori = "Confronta due contatori";
 
@@ -265,6 +265,12 @@ public class CreaRegolaController {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
+        }
+
+        if (selectedItem.equals(exitStatus)){
+
+
 
         }
 

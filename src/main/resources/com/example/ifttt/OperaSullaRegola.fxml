@@ -22,6 +22,7 @@
                     <String fx:id="dCompletaTrigger" fx:value="Seleziona una data" />
                     <String fx:id="esisteunFileTrigger" fx:value="Se esiste un File" />
                     <String fx:id="dimFileTrigger" fx:value="Se la dimensione del file è &gt; di" />
+                    <String fx:id="exitStatusTrigger" fx:value="Se un programma ha 'Exist status':" />
                     <String fx:id="contatoreIntero" fx:value="Confronta un contatore con intero" />
                     <String fx:id="confrontoContatori" fx:value="Confronta due contatori" />
                 </FXCollections>
