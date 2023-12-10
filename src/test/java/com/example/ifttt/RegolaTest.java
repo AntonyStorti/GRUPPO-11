@@ -136,7 +136,7 @@ public class RegolaTest {
 
         // Verifica che l'azione RiproduciAudio sia eseguita correttamente
         assertTrue(esito);
-        // Puoi anche aggiungere ulteriori asserzioni specifiche per l'azione se necessario
+
     }
 
 }

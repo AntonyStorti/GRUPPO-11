@@ -7,7 +7,6 @@ import java.io.Serializable;
 
 public class MockRiproduciAudio implements Azione, Serializable {
 
-    // Aggiungi eventuali campi necessari per il test
     private boolean eseguita = false;
 
     // Costruttore
@@ -30,15 +29,12 @@ public class MockRiproduciAudio implements Azione, Serializable {
         return new JSONObject();
     }
 
-    // Puoi aggiungere altri metodi o campi necessari per il test
 
-    // Aggiungi un metodo per verificare se l'azione è stata eseguita nel test
+
     public boolean isEseguita() {
         return eseguita;
     }
 
-    // Puoi implementare altri metodi necessari per il test
 
-    // Gli altri metodi come toString, deserialize e getTipo non sono necessari per il test del trigger
 
 }

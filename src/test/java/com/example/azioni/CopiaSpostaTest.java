@@ -26,7 +26,7 @@ public class CopiaSpostaTest {
 
     @Test
     void testEseguiAzioneCopia() {
-        // Assicurati che i file di destinazione non esistano prima dell'esecuzione del test
+
         Path destinazione = Path.of(PERCORSO_DESTINAZIONE);
         assertTrue(!Files.exists(destinazione.resolve(Path.of("test-file-1.txt"))));
         assertTrue(!Files.exists(destinazione.resolve(Path.of("test-file-2.txt"))));
@@ -35,14 +35,14 @@ public class CopiaSpostaTest {
         azione1.eseguiAzione();
         azione2.eseguiAzione();
 
-        // Verifica che i file siano stati copiati con successo nella destinazione
+
         assertTrue(Files.exists(destinazione.resolve(Path.of("test-file-1.txt"))));
         assertTrue(Files.exists(destinazione.resolve(Path.of("test-file-2.txt"))));
     }
 
     @Test
     void testEseguiAzioneSposta() {
-        // Assicurati che i file di destinazione non esistano prima dell'esecuzione del test
+
         Path destinazione = Path.of(PERCORSO_DESTINAZIONE);
         assertTrue(!Files.exists(destinazione.resolve(Path.of("test-file-1.txt"))));
         assertTrue(!Files.exists(destinazione.resolve(Path.of("test-file-2.txt"))));

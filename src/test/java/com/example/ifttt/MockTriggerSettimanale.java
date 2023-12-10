@@ -20,7 +20,7 @@ public class MockTriggerSettimanale extends TriggerSettimanale {
     @Override
     public boolean verificaCondizione() {
         // Simula il comportamento desiderato nel test
-        // Ad esempio, restituisci sempre true per il test
+
         return true;
     }
 
