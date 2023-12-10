@@ -72,7 +72,7 @@ public class CreaRegolaController {
     private Integer valoreDaSommare;
     private Contatore contatoreSomma1;
     private Contatore contatoreSomma2;
-    private Integer exitStatus;
+    private Integer exitStatusU;
 
     private HelloController helloController;
 
@@ -284,7 +284,7 @@ public class CreaRegolaController {
                 stage.setOnHidden(event -> {
 
                     percorsoAPP = sharedDataModel.getPercorsoAPP();
-                    exitStatus = sharedDataModel.getExitStatus();
+                    exitStatusU = sharedDataModel.getExitStatus();
 
                 });
 
@@ -595,8 +595,8 @@ public class CreaRegolaController {
         if (selectedTrigger.equals(dimFile)){
             t = new DimensioneFile(nomeFile,dimensione, unita);
         }
-        if (selectedTrigger.equals(exitStatus.toString())){
-            t = new ExitStatus(percorsoAPP, exitStatus);
+        if (selectedTrigger.equals(exitStatus)){
+            t = new ExitStatus(percorsoAPP, exitStatusU);
         }
         if (selectedTrigger.equals(contatoreInt)){
             t = new ContatoreIntero(contatore, intero,confronto);
