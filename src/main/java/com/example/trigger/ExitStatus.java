@@ -9,12 +9,16 @@ public class ExitStatus implements Trigger {
 
     String percorso;
     Integer exitStatus;
+    String exitUtente = String.valueOf(exitStatus);
+
 
 
     public ExitStatus(String percorso, Integer exitStatus) {
         this.percorso = percorso;
         this.exitStatus = exitStatus;
     }
+
+
 
     @Override
     public boolean verificaCondizione() {
@@ -31,7 +35,7 @@ public class ExitStatus implements Trigger {
             System.out.println("Stato di uscita: " + exitCode);
 
 
-            if (exitStatus.equals(exitCode))
+            if (exitUtente.equals(exitCode))
                 return true;
             else
                 return false;
@@ -41,6 +45,7 @@ public class ExitStatus implements Trigger {
             e.printStackTrace();
         }
 
+        return false;
 
     }
 

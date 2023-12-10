@@ -595,7 +595,7 @@ public class CreaRegolaController {
         if (selectedTrigger.equals(dimFile)){
             t = new DimensioneFile(nomeFile,dimensione, unita);
         }
-        if (selectedTrigger.equals(exitStatus)){
+        if (selectedTrigger.equals(exitStatus.toString())){
             t = new ExitStatus(percorsoAPP, exitStatus);
         }
         if (selectedTrigger.equals(contatoreInt)){
