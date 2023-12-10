@@ -9,7 +9,7 @@ public class ExitStatus implements Trigger {
 
     String percorso;
     Integer exitStatus;
-    String exitUtente = String.valueOf(exitStatus);
+
 
 
 
@@ -35,7 +35,7 @@ public class ExitStatus implements Trigger {
             System.out.println("Stato di uscita: " + exitCode);
 
 
-            if (exitUtente.equals(exitCode))
+            if (exitStatus.equals(exitCode))
                 return true;
             else
                 return false;
@@ -50,10 +50,18 @@ public class ExitStatus implements Trigger {
     }
 
 
-
     @Override
     public JSONObject toJSONObject() {
-        return null;
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("tipo", getTipo());  // Supponiamo che getTipo() restituisca una stringa che identifica il tipo di trigger
+        jsonObject.put("percorso", percorso);
+        jsonObject.put("exitStatus", exitStatus);
+        return jsonObject;
+    }
+
+
+    public String getTipo() {
+        return "ExitStatus";
     }
 
 }

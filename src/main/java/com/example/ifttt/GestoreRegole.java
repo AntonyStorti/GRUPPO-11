@@ -276,6 +276,11 @@ public class GestoreRegole implements Runnable {
             String unita = jsonTrigger.getString("unita");
             return new DimensioneFile(percorso, dimensione, unita);
         }
+        if ("ExitStatus".equals(tipoTrigger)) {
+            String percorso = jsonTrigger.getString("percorso");
+            Integer exitStatus = jsonTrigger.getInt("exitStatus");
+            return new ExitStatus(percorso, exitStatus);
+        }
         if ("ContatoreIntero".equals(tipoTrigger))
         {
             JSONObject c = jsonTrigger.getJSONObject("contatore");
