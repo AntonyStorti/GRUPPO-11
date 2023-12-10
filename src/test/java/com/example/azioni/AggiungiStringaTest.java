@@ -14,6 +14,7 @@ import java.nio.file.Paths;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class AggiungiStringaTest {
 
     private Azione azione;
@@ -21,22 +22,22 @@ public class AggiungiStringaTest {
 
     @BeforeEach
     void setUp() {
-        // Inizializza l'oggetto AggiungiStringa con valori di esempio per i test
         azione = new AggiungiStringa(testFilePath, "Testo da aggiungere");
     }
 
     @Test
     void testEseguiAzione() {
-        // Esegui l'azione
+
         azione.eseguiAzione();
 
         // Verifica se la stringa è stata effettivamente aggiunta al file
         assertTrue(fileContainsString(testFilePath, "Testo da aggiungere"));
+
     }
 
     @Test
     void testToJSONObject() {
-        // Chiamata al metodo toJSONObject
+
         JSONObject jsonObject = azione.toJSONObject();
 
         // Verifica che il JSONObject contenga i valori corretti
@@ -45,7 +46,7 @@ public class AggiungiStringaTest {
         assertEquals("Testo da aggiungere", jsonObject.getString("testodaaggiungere"));
     }
 
-    // Implementazione di un metodo di utilità per verificare se un file contiene una determinata stringa
+
     private boolean fileContainsString(String filePath, String targetString) {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -60,7 +61,7 @@ public class AggiungiStringaTest {
         return false;
     }
 
-    // Implementazione di un metodo di cleanup per rimuovere il file di test dopo l'esecuzione dei test
+    // Metodo per rimuovere il file di test dopo l'esecuzione dello stesso!
     // Chiamato automaticamente da JUnit dopo ogni test
     @Test
     void cleanup() {

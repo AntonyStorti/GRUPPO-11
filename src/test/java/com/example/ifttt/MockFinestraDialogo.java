@@ -1,6 +1,5 @@
 package com.example.ifttt;
 
-
 import org.json.JSONObject;
 
 
@@ -29,7 +28,7 @@ public class MockFinestraDialogo implements Azione {
     @Override
     public JSONObject toJSONObject() {
         // Implementazione del metodo astratto toJSONObject()
-        return new JSONObject(); // Oppure, restituisci un oggetto JSON valido in base ai tuoi requisiti
+        return new JSONObject();
     }
 }
 

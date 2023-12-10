@@ -9,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class TriggerSuDataTest {
 
     @Test
@@ -27,6 +28,7 @@ public class TriggerSuDataTest {
                 () -> assertEquals(tempo.toString(), jsonObject.getString("tempo")),
                 () -> assertTrue(jsonObject.get("data") instanceof String)
         );
+
     }
 
     @Test
@@ -40,5 +42,7 @@ public class TriggerSuDataTest {
         // Verifica che il metodo toString restituisca il valore atteso
         String expectedToString = "Attiva il: " + data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         assertEquals(expectedToString, triggerSuData.toString());
+
     }
+
 }

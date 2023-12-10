@@ -8,11 +8,12 @@ import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TriggerMensileTest {
+
+public class TriggerMensileTest {
 
     @Test
     void testVerificaCondizione() {
-        // Imposta la data del mese attuale
+
         LocalDate oggi = LocalDate.now();
 
         // Crea un oggetto TriggerMensile per oggi e un'ora futura
@@ -26,22 +27,23 @@ class TriggerMensileTest {
 
         // Il risultato dovrebbe essere vero perché l'ora corrente soddisfa la condizione
         assertTrue(trigger.verificaCondizione());
+
     }
 
     @Test
     void testToJSONObject() {
-        // Imposta la data del mese attuale
+
         LocalDate oggi = LocalDate.now();
 
-        // Crea un oggetto TriggerMensile
         TriggerMensile trigger = new TriggerMensile(LocalTime.of(12, 30), oggi);
 
-        // Ottieni l'oggetto JSON
         JSONObject jsonObject = trigger.toJSONObject();
 
         // Verifica che l'oggetto JSON contenga i valori attesi
         assertEquals("TriggerMensile", jsonObject.getString("tipo"));
         assertEquals("12:30", jsonObject.getString("tempo"));
         assertEquals(oggi.toString(), jsonObject.getString("giornomese"));
+
     }
+
 }

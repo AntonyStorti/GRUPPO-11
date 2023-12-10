@@ -10,6 +10,7 @@ import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class EliminaFileTest {
 
     @Test
@@ -31,10 +32,10 @@ public class EliminaFileTest {
 
     @Test
     void testEseguiAzione() throws IOException {
+
         // Crea un file temporaneo per il test
         Path tempFile = Files.createTempFile("test-file", ".txt");
 
-        // Crea un'istanza di EliminaFile
         EliminaFile eliminaFile = new EliminaFile(tempFile.toString());
 
         // Verifica che il file esista prima dell'esecuzione del test
@@ -45,20 +46,22 @@ public class EliminaFileTest {
 
         // Verifica che il file sia stato eliminato
         assertFalse(Files.exists(tempFile));
+
     }
 
     @Test
     void testToString() {
-        // Crea un'istanza di EliminaFile
+
         EliminaFile eliminaFile = new EliminaFile("/path/to/file.txt");
 
         // Verifica che il metodo toString restituisca la stringa attesa
         assertEquals("Elimina un File", eliminaFile.toString());
+
     }
 
     @Test
     void testToJSONObject() {
-        // Crea un'istanza di EliminaFile
+
         EliminaFile eliminaFile = new EliminaFile("/path/to/file.txt");
 
         // Ottieni l'oggetto JSON
@@ -71,10 +74,11 @@ public class EliminaFileTest {
 
     @Test
     void testGetTipo() {
-        // Crea un'istanza di EliminaFile
+
         EliminaFile eliminaFile = new EliminaFile("/path/to/file.txt");
 
         // Verifica che il metodo getTipo restituisca il valore atteso
         assertEquals("EliminaFile", eliminaFile.getTipo());
     }
+
 }

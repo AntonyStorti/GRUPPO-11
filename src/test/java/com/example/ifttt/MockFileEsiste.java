@@ -5,17 +5,14 @@ import com.example.trigger.FileEsiste;
 public class MockFileEsiste extends FileEsiste {
 
 
-
-    // Costruttore che richiama il costruttore della superclasse
     public MockFileEsiste(String percorso, String nomeFile) {
         super(percorso, nomeFile);
     }
 
-    // Sovrascrivi il metodo verificaCondizione per controllare il comportamento nel test
+
     @Override
     public boolean verificaCondizione() {
-        // Simula il comportamento desiderato nel test
-        // Ad esempio, restituisci sempre true per il test
+        // Simula il comportamento desiderato
         return true;
     }
 

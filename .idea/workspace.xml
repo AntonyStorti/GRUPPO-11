@@ -6,9 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaValoreContatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaValoreContatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/AggiungiStringaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/AggiungiStringaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/CambiaValoreContatoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/CambiaValoreContatoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/CopiaSpostaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/CopiaSpostaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/EliminaFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/EliminaFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/EseguiProgrammaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/EseguiProgrammaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/FinestraDialogoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/FinestraDialogoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/RiproduciAudioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/RiproduciAudioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/SommaContatoriTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/SommaContatoriTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/azioni/SommaValoreContatoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/azioni/SommaValoreContatoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/ContatoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/ContatoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockDimensioneFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockDimensioneFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockFileEsiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockFileEsiste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockFinestraDialogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockFinestraDialogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockRiproduciAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockRiproduciAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTempoDelGiorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTempoDelGiorno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTriggerMensile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTriggerMensile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTriggerSettimanale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTriggerSettimanale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTriggerSuData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/MockTriggerSuData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ifttt/RegolaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ifttt/RegolaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/ConfrontoContatoriTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/ConfrontoContatoriTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/ContatoreInteroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/ContatoreInteroTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/DimensioneFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/DimensioneFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/ExitStatusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/ExitStatusTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/FileEsisteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/FileEsisteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/TempoDelGiornoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/TempoDelGiornoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/TriggerMensileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/TriggerMensileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/TriggerSettimanaleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/TriggerSettimanaleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/trigger/TriggerSuDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/trigger/TriggerSuDataTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +101,25 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.HelloApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.AggiungiStringaTest.executor": "Run",
+    "JUnit.CambiaValoreContatoreTest.executor": "Run",
+    "JUnit.ConfrontoContatoriTest.executor": "Run",
+    "JUnit.ContatoreTest.executor": "Run",
+    "JUnit.CopiaSpostaTest.executor": "Run",
+    "JUnit.EliminaFileTest.executor": "Profiler#1",
+    "JUnit.EseguiProgrammaTest.executor": "Run",
+    "JUnit.ExitStatusTest.executor": "Run",
+    "JUnit.FileEsisteTest.executor": "Run",
+    "JUnit.FinestraDialogoTest.executor": "Run",
+    "JUnit.RegolaTest.executor": "Run",
     "JUnit.RegolaTest.testValutaEsecuzioneTriggerNonVerificato.executor": "Run",
+    "JUnit.RiproduciAudioTest.executor": "Run",
+    "JUnit.SommaContatoriTest.executor": "Run",
+    "JUnit.SommaValoreContatoreTest.executor": "Run",
+    "JUnit.TempoDelGiornoTest.executor": "Run",
+    "JUnit.TriggerMensileTest.executor": "Run",
+    "JUnit.TriggerSettimanaleTest.executor": "Run",
+    "JUnit.TriggerSuDataTest.executor": "Run",
     "OverrideImplement.generate.javadoc": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -118,40 +161,89 @@
       <recent name="com.example.ifttt" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.ifttt.HelloApplication" />
+  <component name="RunManager" selected="JUnit.TriggerSuDataTest">
+    <configuration name="FileEsisteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IFTTT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.iftt.controller.*" />
+          <option name="PATTERN" value="com.example.trigger.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.example.trigger" />
+      <option name="MAIN_CLASS_NAME" value="com.example.trigger.FileEsisteTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegolaTest.testValutaEsecuzioneTriggerNonVerificato" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TempoDelGiornoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IFTTT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.ifttt.*" />
+          <option name="PATTERN" value="com.example.trigger.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.ifttt" />
-      <option name="MAIN_CLASS_NAME" value="com.example.ifttt.RegolaTest" />
-      <option name="METHOD_NAME" value="testValutaEsecuzioneTriggerNonVerificato" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.trigger" />
+      <option name="MAIN_CLASS_NAME" value="com.example.trigger.TempoDelGiornoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriggerMensileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IFTTT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.trigger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.trigger" />
+      <option name="MAIN_CLASS_NAME" value="com.example.trigger.TriggerMensileTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriggerSettimanaleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IFTTT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.trigger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.trigger" />
+      <option name="MAIN_CLASS_NAME" value="com.example.trigger.TriggerSettimanaleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriggerSuDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IFTTT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.trigger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.trigger" />
+      <option name="MAIN_CLASS_NAME" value="com.example.trigger.TriggerSuDataTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="JUnit.RegolaTest.testValutaEsecuzioneTriggerNonVerificato" />
+        <item itemvalue="JUnit.TriggerSuDataTest" />
+        <item itemvalue="JUnit.TriggerSettimanaleTest" />
+        <item itemvalue="JUnit.TriggerMensileTest" />
+        <item itemvalue="JUnit.TempoDelGiornoTest" />
+        <item itemvalue="JUnit.FileEsisteTest" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +338,7 @@
       <workItem from="1702200124587" duration="1629000" />
       <workItem from="1702214702478" duration="140000" />
       <workItem from="1702214971380" duration="284000" />
-      <workItem from="1702220693721" duration="16832000" />
+      <workItem from="1702220693721" duration="18975000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -608,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702243693119</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702245189518</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1702245189518</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,5 +757,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Applicazione_IFTTT$EliminaFileTest.ic" NAME="EliminaFileTest Coverage Results" MODIFIED="1702245693952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.azioni.*</FILTER>
+    </SUITE>
   </component>
 </project>

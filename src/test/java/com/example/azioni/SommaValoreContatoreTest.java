@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+
 public class SommaValoreContatoreTest {
 
     @Test
@@ -14,7 +15,6 @@ public class SommaValoreContatoreTest {
         // Creazione di un contatore di test
         Contatore contatore = new Contatore("Contatore1", 5);
 
-        // Creazione di un'istanza di SommaValoreContatore con sommaValore pari a 10
         SommaValoreContatore sommaValoreContatore = new SommaValoreContatore(contatore, 10);
 
         // Verifica che l'esecuzione dell'azione modifichi correttamente il contatore
@@ -29,7 +29,6 @@ public class SommaValoreContatoreTest {
         // Creazione di un contatore di test
         Contatore contatore = new Contatore("Contatore1", 5);
 
-        // Creazione di un'istanza di SommaValoreContatore con sommaValore pari a 10
         SommaValoreContatore sommaValoreContatore = new SommaValoreContatore(contatore, 10);
 
         // Creazione di un oggetto JSONObject dalla SommaValoreContatore

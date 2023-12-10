@@ -1,12 +1,12 @@
 package com.example.azioni;
 
-
 import com.example.ifttt.Contatore;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 
 public class SommaContatoriTest {
 
@@ -16,7 +16,6 @@ public class SommaContatoriTest {
         Contatore contatore1 = new Contatore("Contatore1", 5);
         Contatore contatore2 = new Contatore("Contatore2", 10);
 
-        // Creazione di un'istanza di SommaContatori
         SommaContatori sommaContatori = new SommaContatori(contatore1, contatore2);
 
         // Verifica che l'esecuzione dell'azione modifichi correttamente i contatori
@@ -33,10 +32,8 @@ public class SommaContatoriTest {
         Contatore contatore1 = new Contatore("Contatore1", 5);
         Contatore contatore2 = new Contatore("Contatore2", 10);
 
-        // Creazione di un'istanza di SommaContatori
         SommaContatori sommaContatori = new SommaContatori(contatore1, contatore2);
 
-        // Creazione di un oggetto JSONObject dalla SommaContatori
         JSONObject jsonObject = sommaContatori.toJSONObject();
 
         // Verifica che il JSONObject contenga correttamente le informazioni della SommaContatori

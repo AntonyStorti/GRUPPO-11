@@ -9,6 +9,7 @@ import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class CopiaSpostaTest {
 
     private static final String PERCORSO_ORIGINE_1 = "C:\\Users\\miria\\test-file-1.txt";
@@ -35,7 +36,6 @@ public class CopiaSpostaTest {
         azione1.eseguiAzione();
         azione2.eseguiAzione();
 
-
         assertTrue(Files.exists(destinazione.resolve(Path.of("test-file-1.txt"))));
         assertTrue(Files.exists(destinazione.resolve(Path.of("test-file-2.txt"))));
     }
@@ -54,7 +54,6 @@ public class CopiaSpostaTest {
         // Verifica che i file siano stati spostati con successo nella destinazione
         assertTrue(Files.exists(destinazione.resolve(Path.of("test-file-1.txt"))));
         assertTrue(Files.exists(destinazione.resolve(Path.of("test-file-2.txt"))));
-
 
     }
 }

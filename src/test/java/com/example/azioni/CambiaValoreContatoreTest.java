@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 
-class CambiaValoreContatoreTest {
+public class CambiaValoreContatoreTest {
 
     @Test
     void eseguiAzione_DovrebbeCambiareValoreContatoreEAggiornareListaContatori() {
@@ -18,20 +18,15 @@ class CambiaValoreContatoreTest {
         Contatore contatore = new Contatore("TestContatore", 10);
         CambiaValoreContatore cambiaValoreContatore = new CambiaValoreContatore(contatore, 20);
 
-        // Mock del HelloController
         HelloController helloController = mock(HelloController.class);
         cambiaValoreContatore.helloController = helloController;
 
-        // Mock della lista di contatori
         GestoreContatori.listaContatori.add(contatore);
 
-        // Stub della chiamata a salvaContatoriSuFile
         doNothing().when(helloController).salvaContatoriSuFile();
-
 
         cambiaValoreContatore.eseguiAzione();
 
-        // Assert
         assertEquals(20, contatore.getValore());
 
         // Verifica che la lista dei contatori sia stata aggiornata
@@ -50,7 +45,6 @@ class CambiaValoreContatoreTest {
 
         JSONObject jsonObject = cambiaValoreContatore.toJSONObject();
 
-
         assertEquals("CambiaValoreContatore", jsonObject.getString("tipo"));
         assertEquals("TestContatore", jsonObject.getJSONObject("contatore").getString("nome"));
         assertEquals(20, jsonObject.getInt("valore"));
@@ -64,9 +58,7 @@ class CambiaValoreContatoreTest {
         jsonObject.put("contatore", new Contatore("TestContatore", 10).toJSONObject());
         jsonObject.put("valore", 20);
 
-
         CambiaValoreContatore cambiaValoreContatore = CambiaValoreContatore.deserialize(jsonObject);
-
 
         assertEquals("TestContatore", cambiaValoreContatore.getContatore().getNome());
         assertEquals(20, cambiaValoreContatore.getNuovoValore());

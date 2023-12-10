@@ -4,6 +4,7 @@ import org.json.JSONObject;
 
 import java.time.LocalTime;
 
+
 public class MockTempoDelGiorno implements Trigger {
 
     private boolean verificaCondizione;
@@ -23,14 +24,10 @@ public class MockTempoDelGiorno implements Trigger {
         this.verificaCondizione = verificaCondizione;
     }
 
-    public void setOraCorrente(LocalTime oraCorrente) {
-        this.oraCorrente = oraCorrente;
-    }
-
 
     @Override
     public JSONObject toJSONObject() {
-        // Implementazione del metodo astratto toJSONObject()
-        return new JSONObject(); // Oppure, restituisci un oggetto JSON valido in base ai tuoi requisiti
+        return new JSONObject();
     }
+
 }

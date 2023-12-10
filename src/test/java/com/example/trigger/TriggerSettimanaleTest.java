@@ -9,11 +9,12 @@ import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TriggerSettimanaleTest {
+
+public class TriggerSettimanaleTest {
 
     @Test
     void testVerificaCondizione() {
-        // Imposta il giorno della settimana attuale
+
         DayOfWeek giornoAttuale = LocalDate.now().getDayOfWeek();
 
         // Crea un oggetto TriggerSettimanale per il giorno attuale e un'ora futura
@@ -27,22 +28,23 @@ class TriggerSettimanaleTest {
 
         // Il risultato dovrebbe essere vero perché l'ora corrente soddisfa la condizione
         assertTrue(trigger.verificaCondizione());
+
     }
 
     @Test
     void testToJSONObject() {
-        // Imposta il giorno della settimana attuale
+
         DayOfWeek giornoAttuale = LocalDate.now().getDayOfWeek();
 
-        // Crea un oggetto TriggerSettimanale
         TriggerSettimanale trigger = new TriggerSettimanale(LocalTime.of(12, 30), giornoAttuale);
 
-        // Ottieni l'oggetto JSON
         JSONObject jsonObject = trigger.toJSONObject();
 
         // Verifica che l'oggetto JSON contenga i valori attesi
         assertEquals("TriggerSettimanale", jsonObject.getString("tipo"));
         assertEquals("12:30", jsonObject.getString("tempo"));
         assertEquals(giornoAttuale.toString(), jsonObject.getString("giornosettimana"));
+
     }
+
 }

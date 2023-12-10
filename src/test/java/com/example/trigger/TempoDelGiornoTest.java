@@ -7,7 +7,8 @@ import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TempoDelGiornoTest {
+
+public class TempoDelGiornoTest {
     @Test
     void verificaCondizione_DovrebbeRestituireTrueQuandoIlTempoCorrisponde() {
 
@@ -16,7 +17,6 @@ class TempoDelGiornoTest {
         TempoDelGiorno tempoDelGiorno = new TempoDelGiorno(orarioCorrente);
 
         boolean risultato = tempoDelGiorno.verificaCondizione();
-
 
         assertTrue(risultato);
     }
@@ -30,9 +30,7 @@ class TempoDelGiornoTest {
         LocalTime orarioTrigger = LocalTime.of(12, 34);
         TempoDelGiorno tempoDelGiorno = new TempoDelGiorno(orarioTrigger);
 
-
         boolean risultato = tempoDelGiorno.verificaCondizione();
-
 
         assertFalse(risultato);
     }
@@ -47,6 +45,7 @@ class TempoDelGiornoTest {
 
         assertEquals("TempoDelGiorno", jsonObject.getString("tipo"));
         assertEquals("15:45", jsonObject.getString("tempo"));
+
     }
 
     @Test
@@ -60,6 +59,8 @@ class TempoDelGiornoTest {
 
 
         assertEquals("Attiva alle ore 18:00", risultato);
+
     }
+
 }
 
