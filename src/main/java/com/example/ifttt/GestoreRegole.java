@@ -45,10 +45,12 @@ public class GestoreRegole implements Runnable {
 
                     //Itero sugli elementi della lista//
                     for (Regola a : listaRegole) {
-                        if (a.valutaEsecuzione()){
-                            a.setEseguito(true);
-                            a.setStato(false);
-                            aggiornaFile(a);
+                        if (a.getStato() == "Attiva") {
+                            if (a.valutaEsecuzione()) {
+                                a.setEseguito(true);
+                                a.setStato(false);
+                                aggiornaFile(a);
+                            }
                         }
                         if(a.isRipetibile()) {
                             if(Instant.now().isAfter(a.getUltimaEsecuzione().plus(a.getPeriodoIbernazione()))) {
