@@ -25,6 +25,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Applicazione IFTTT [Gruppo 11 (I-Z)]");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
