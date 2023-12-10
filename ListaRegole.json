@@ -1,24 +1,5 @@
 {"regole": [
   {
-    "eseguito": true,
-    "stato": false,
-    "ripetibile": false,
-    "azione": {
-      "tipo": "CambiaValoreContatore",
-      "valore": 1,
-      "contatore": {
-        "valorec": 10,
-        "nome": "a"
-      }
-    },
-    "nome": "g",
-    "ID": 1,
-    "trigger": {
-      "tipo": "TempoDelGiorno",
-      "tempo": "19:38"
-    }
-  },
-  {
     "eseguito": false,
     "stato": true,
     "ripetibile": false,
@@ -27,7 +8,7 @@
       "testoUtente": "aaa"
     },
     "nome": "a",
-    "ID": 9,
+    "ID": 8,
     "trigger": {
       "tipo": "ContatoreIntero",
       "valore": 1,
@@ -37,5 +18,16 @@
         "nome": "a"
       }
     }
+  },
+  {
+    "eseguito": false,
+    "stato": true,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "FinestraDialogo",
+      "testoUtente": "lkl"
+    },
+    "nome": "l",
+    "ID": 9
   }
 ]}

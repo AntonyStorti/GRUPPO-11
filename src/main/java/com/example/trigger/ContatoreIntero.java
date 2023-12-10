@@ -3,6 +3,8 @@ package com.example.trigger;
 import com.example.ifttt.Contatore;
 import org.json.JSONObject;
 
+import java.util.Objects;
+
 public class ContatoreIntero extends TriggerContatori{
 
     Integer valore;
@@ -26,7 +28,7 @@ public class ContatoreIntero extends TriggerContatori{
                 return contatore.getValore() < valore;
 
             if (confronto.equals("="))
-                return contatore.getValore() == valore;
+                return Objects.equals(contatore.getValore(), valore);
 
             if (confronto.equals(">="))
                 return contatore.getValore() >= valore;
