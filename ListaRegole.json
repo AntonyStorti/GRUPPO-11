@@ -1,0 +1,158 @@
+{"regole": [
+  {
+    "eseguito": true,
+    "stato": false,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "FinestraDialogo",
+      "testoUtente": "aaa"
+    },
+    "nome": "a",
+    "ID": 1,
+    "trigger": {
+      "tipo": "ConfrontoContatori",
+      "contatore2": {
+        "valorec": 10,
+        "nome": "b"
+      },
+      "contatore1": {
+        "valorec": 10,
+        "nome": "a"
+      },
+      "confronto": "="
+    }
+  },
+  {
+    "eseguito": true,
+    "stato": false,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "CambiaValoreContatore",
+      "valore": 1,
+      "contatore": {
+        "valorec": 10,
+        "nome": "a"
+      }
+    },
+    "nome": "b",
+    "ID": 2,
+    "trigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "19:15"
+    }
+  },
+  {
+    "eseguito": true,
+    "stato": false,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "SommaValoreContatore",
+      "valore": 1,
+      "contatore": {
+        "valorec": 10,
+        "nome": "b"
+      }
+    },
+    "nome": "c",
+    "ID": 3,
+    "trigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "19:16"
+    }
+  },
+  {
+    "eseguito": true,
+    "stato": false,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "CambiaValoreContatore",
+      "valore": 1,
+      "contatore": {
+        "valorec": 10,
+        "nome": "a"
+      }
+    },
+    "nome": "d",
+    "ID": 4,
+    "trigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "19:27"
+    }
+  },
+  {
+    "eseguito": false,
+    "stato": true,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "SommaValoreContatore",
+      "valore": 1,
+      "contatore": {
+        "valorec": 10,
+        "nome": "b"
+      }
+    },
+    "nome": "e",
+    "ID": 5,
+    "trigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "19:28"
+    }
+  },
+  {
+    "eseguito": true,
+    "stato": false,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "CambiaValoreContatore",
+      "valore": 1,
+      "contatore": {
+        "valorec": 10,
+        "nome": "a"
+      }
+    },
+    "nome": "x",
+    "ID": 6,
+    "trigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "19:33"
+    }
+  },
+  {
+    "eseguito": true,
+    "stato": false,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "CambiaValoreContatore",
+      "valore": 1,
+      "contatore": {
+        "valorec": 10,
+        "nome": "a"
+      }
+    },
+    "nome": "f",
+    "ID": 7,
+    "trigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "19:36"
+    }
+  },
+  {
+    "eseguito": true,
+    "stato": false,
+    "ripetibile": false,
+    "azione": {
+      "tipo": "CambiaValoreContatore",
+      "valore": 1,
+      "contatore": {
+        "valorec": 10,
+        "nome": "a"
+      }
+    },
+    "nome": "g",
+    "ID": 8,
+    "trigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "19:38"
+    }
+  }
+]}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllerGUI.CreaRegolaController">
+    <children>
+        <Text layoutX="226.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci il nome:" wrappingWidth="111.64697265625">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <TextField fx:id="sceltaNome" layoutX="338.0" layoutY="28.0" />
+        <ChoiceBox fx:id="sceltaTrigger" layoutX="368.0" layoutY="163.0" onAction="#apriFinestraSceltaTrigger" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:id="oraTrigger" fx:value="Seleziona un orario" />
+                    <String fx:id="giornoTrigger" fx:value="Seleziona un giorno" />
+                    <String fx:id="gMeseTrigger" fx:value="Seleziona un giorno del mese" />
+                    <String fx:id="dCompletaTrigger" fx:value="Seleziona una data" />
+                    <String fx:id="esisteunFileTrigger" fx:value="Se esiste un File" />
+                    <String fx:id="dimFileTrigger" fx:value="Se la dimensione del file è &gt; di" />
+                    <String fx:id="contatoreIntero" fx:value="Confronta un contatore con intero" />
+                    <String fx:id="confrontoContatori" fx:value="Confronta due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <ChoiceBox fx:id="sceltaAzione" layoutX="368.0" layoutY="242.0" onAction="#apriFinestraSceltaAzioni" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Riproduci un audio" />
+                    <String fx:value="Visualizza messaggio" />
+                    <String fx:value="Esegui un programma" />
+                    <String fx:value="Aggiungi una stringa" />
+                    <String fx:value="Elimina un file" />
+                    <String fx:value="Copia/Sposta un file" />
+                    <String fx:value="Settare contatore a un valore" />
+                    <String fx:value="Sommare un intero a un contatore" />
+                    <String fx:value="Sommare due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Text layoutX="139.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli la condizione (Trigger):" wrappingWidth="210.64697265625">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <Text layoutX="161.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli l'azione da eseguire:" wrappingWidth="196.64698028564453">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <Button fx:id="inviaButton" layoutX="271.0" layoutY="411.0" mnemonicParsing="false" onAction="#creaRegola" prefHeight="31.0" prefWidth="133.0" text="Crea">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+      <CheckBox fx:id="ripetibile" layoutX="296.0" layoutY="317.0" mnemonicParsing="false" onAction="#ripetiAzione" prefHeight="31.0" prefWidth="83.0" text="Ripetibile" />
+    </children>
+</AnchorPane>
