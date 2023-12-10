@@ -64,6 +64,10 @@ public class SommaContatori extends AzioniSuContatori {
         return "SommaContatori";
     }
 
+    public Contatore getContatore2() {
+        return contatore2;
+    }
+
     @Override
     public String toString() {
         return "Somma al Contatore " + contatore.getNome() + " il Contatore " + contatore2.getNome();

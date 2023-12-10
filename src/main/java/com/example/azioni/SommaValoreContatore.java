@@ -56,6 +56,11 @@ public class SommaValoreContatore extends AzioniSuContatori {
 
     }
 
+
+    public Integer getSommaValore() {
+        return sommaValore;
+    }
+
     @Override
     public String getTipo() {
         return "SommaValoreContatore";

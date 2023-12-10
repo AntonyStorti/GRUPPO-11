@@ -67,6 +67,10 @@ public class CambiaValoreContatore extends AzioniSuContatori {
         return "CambiaValoreContatore";
     }
 
+    public Integer getNuovoValore() {
+        return nuovoValore;
+    }
+
     @Override
     public String toString() {
         return "Cambia Valore al Contatore " + contatore.getNome();

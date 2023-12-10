@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint" />
+    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaValoreContatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/SommaValoreContatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +246,7 @@
       <workItem from="1702200124587" duration="1629000" />
       <workItem from="1702214702478" duration="140000" />
       <workItem from="1702214971380" duration="284000" />
-      <workItem from="1702220693721" duration="15423000" />
+      <workItem from="1702220693721" duration="16832000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -587,7 +592,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702243520843</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702243601303</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1702243601303</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702243693119</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1702243693119</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
