@@ -57,6 +57,7 @@ public class CreaRegolaController {
     private EliminaFile path;
     private String sorgente;
     private String destinazione;
+    private String percorsoAPP;
     private String scelta;
     private Duration periodoIbernazione;
     private Contatore contatore;
@@ -71,7 +72,7 @@ public class CreaRegolaController {
     private Integer valoreDaSommare;
     private Contatore contatoreSomma1;
     private Contatore contatoreSomma2;
-
+    private Integer exitStatus;
 
     private HelloController helloController;
 
@@ -270,7 +271,27 @@ public class CreaRegolaController {
 
         if (selectedItem.equals(exitStatus)){
 
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ifttt/ExitStatus.fxml"));
+                Parent root = loader.load();
+                ExitStatusController controller = loader.getController();
+                controller.setSharedDataModel(sharedDataModel);
 
+                Stage stage = new Stage();
+                stage.setTitle("Scegli l'App da eseguire...");
+                stage.setScene(new Scene(root));
+
+                stage.setOnHidden(event -> {
+
+                    percorsoAPP = sharedDataModel.getPercorsoAPP();
+                    exitStatus = sharedDataModel.getExitStatus();
+
+                });
+
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         }
 
@@ -573,6 +594,9 @@ public class CreaRegolaController {
         }
         if (selectedTrigger.equals(dimFile)){
             t = new DimensioneFile(nomeFile,dimensione, unita);
+        }
+        if (selectedTrigger.equals(exitStatus)){
+            t = new ExitStatus(percorsoAPP, exitStatus);
         }
         if (selectedTrigger.equals(contatoreInt)){
             t = new ContatoreIntero(contatore, intero,confronto);

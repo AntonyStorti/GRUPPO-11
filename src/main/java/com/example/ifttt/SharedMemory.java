@@ -24,6 +24,7 @@ public class SharedMemory {
     private String sorgente;
     private String destinazione;
     private String scelta;
+    private String percorsoAPP;
     private Duration periodoIbernazione;
     private Contatore contatore;
     private Integer intero;
@@ -38,7 +39,7 @@ public class SharedMemory {
     private Integer valoreDaSommare;
     private Contatore contatoreSomma1;
     private Contatore contatoreSomma2;
-
+    private Integer exitStatus;
 
 
 
@@ -237,6 +238,14 @@ public class SharedMemory {
         this.contatoreDaAggiornare = contatoreDaAggiornare;
     }
 
+    public String getPercorsoAPP() {
+        return percorsoAPP;
+    }
+
+    public void setPercorsoAPP(String percorsoAPP) {
+        this.percorsoAPP = percorsoAPP;
+    }
+
     public Integer getNuovoValore() {
         return nuovoValore;
     }
@@ -271,6 +280,14 @@ public class SharedMemory {
 
     public Contatore getContatoreSomma2() {
         return contatoreSomma2;
+    }
+
+    public Integer getExitStatus() {
+        return exitStatus;
+    }
+
+    public void setExitStatus(Integer exitStatus) {
+        this.exitStatus = exitStatus;
     }
 
     public void setContatoreSomma2(Contatore contatoreSomma2) {

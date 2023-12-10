@@ -13,7 +13,7 @@
                 <Font name="System Bold" size="15.0" />
             </font>
         </Text>
-        <Button fx:id="scegliAPP" layoutX="187.0" layoutY="57.0" mnemonicParsing="false" onAction="#scegliAPP" text="Scegli" />
+        <Button fx:id="scegli" layoutX="187.0" layoutY="57.0" mnemonicParsing="false" onAction="#scegliAPP" text="Scegli" />
         <Text layoutX="89.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exit Status:">
             <font>
                 <Font name="System Bold" size="13.0" />

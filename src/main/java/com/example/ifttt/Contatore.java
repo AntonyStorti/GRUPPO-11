@@ -5,10 +5,12 @@ import org.json.JSONObject;
 import java.io.Serializable;
 
 public class Contatore implements Serializable {
-    private String nome;
-    private int valorec;
 
-    public Contatore(String nome, int valorec) {
+    private String nome;
+    private Integer valorec;
+
+
+    public Contatore(String nome, Integer valorec) {
         this.nome = nome;
         this.valorec = valorec;
     }
@@ -21,11 +23,11 @@ public class Contatore implements Serializable {
         this.nome = nome;
     }
 
-    public int getValore() {
+    public Integer getValore() {
         return valorec;
     }
 
-    public void setValore(int valore) {
+    public void setValore(Integer valorec) {
         this.valorec = valorec;
     }
 
