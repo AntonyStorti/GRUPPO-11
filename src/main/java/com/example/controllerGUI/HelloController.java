@@ -40,6 +40,8 @@ import java.util.List;
 public class HelloController {
 
     @FXML
+    public Button compostaButton;
+    @FXML
     private Button creaRegolaButton;
     @FXML
     private Button attivaButton;
@@ -96,6 +98,7 @@ public class HelloController {
         creaRegolaButton.setOnAction(event -> apriFinestraCreazioneRegola());
         attivaButton.setOnAction(event -> attivaDisattiva());
         eliminaRegolaButton.setOnAction(event -> eliminaRegola());
+        compostaButton.setOnAction(event -> creaRegolaComposta());
 
         // Crea un timeline per l'aggiornamento periodico
         Timeline refreshTabella = new Timeline(new KeyFrame(Duration.millis(250), event -> tabellaRegole.refresh()));
@@ -577,4 +580,16 @@ public class HelloController {
     }
 
 
+    public void creaRegolaComposta() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ifttt/RegoleRipetute.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Crea una regola composta...");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

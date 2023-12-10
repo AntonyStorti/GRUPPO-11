@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint" />
+    <list default="true" id="0bab4790-3a7f-4aae-9629-c4f690cc436e" name="Changes" comment="Terzo Sprint">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioneComposta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/azioni/AzioneComposta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/RegoleRipetuteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllerGUI/RegoleRipetuteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trigger/TriggerComposto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/HomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/RegoleRipetute.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ifttt/RegoleRipetute.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +249,7 @@
       <workItem from="1702200124587" duration="1629000" />
       <workItem from="1702214702478" duration="140000" />
       <workItem from="1702214971380" duration="284000" />
-      <workItem from="1702220693721" duration="6573000" />
+      <workItem from="1702220693721" duration="9225000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -547,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702227175758</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702227488000</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1702227488000</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,21 +608,6 @@
     <MESSAGE value="Terzo Sprint" />
     <option name="LAST_COMMIT_MESSAGE" value="Terzo Sprint" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/controllerGUI/HelloController.java</url>
-          <line>183</line>
-          <properties class="com.example.controllerGUI.HelloController">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
