@@ -34,7 +34,6 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -480,17 +479,10 @@ public class HelloController {
         // Salva tutti i contatori nel file
         salvaContatoriSuFile();
 
-        aggiornaTabellaC(Collections.singletonList(nuovoContatore));
-
-
         // Pulisci i campi di testo
         nomeContatore.clear();
         valoreContatore.clear();
-    }
 
-    public void aggiornaTabellaC(List<Contatore> nuoviContatori) {
-        ObservableList<Contatore> observableList = FXCollections.observableArrayList(nuoviContatori);
-        tabellaContatori.getItems().addAll(observableList);
     }
 
     private void caricaContatoriDaFile() {
