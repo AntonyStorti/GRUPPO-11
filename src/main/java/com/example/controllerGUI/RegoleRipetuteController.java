@@ -57,6 +57,7 @@ public class RegoleRipetuteController {
     @FXML
     public Button creaButton;
 
+
     public static ObservableList<Regola> lista = FXCollections.observableArrayList(GestoreRegole.listaRegole);
 
 
@@ -605,23 +606,32 @@ public class RegoleRipetuteController {
     }
 
     public void creaRegola() {
+
         String nome = sceltaNome.getText();
+
         String selectedTrigger1 = Trigger1.getValue();
         String selectedTrigger2 = Trigger2.getValue();
         String selectedTrigger3 = Trigger3.getValue();
         String selectedAzione1 = Azione1.getValue();
         String selectedAzione2 = Azione2.getValue();
         String selectedAzione3 = Azione3.getValue();
+        String logica1 = LogicaT1.getValue();
+        String logica2 = LogicaT2.getValue();
+
+        boolean nT1 = nega1.isSelected();
+        boolean nT2 = nega2.isSelected();
+        boolean nT3 = nega3.isSelected();
+
 
 
         Trigger t = null;
         Azione a = null;
 
-
         //Trigger:
         Trigger t1 = null;
         Trigger t2 = null;
         Trigger t3 = null;
+
         if (selectedTrigger1.equals(sceltaOra) || selectedTrigger2.equals(sceltaOra) || selectedTrigger3.equals(sceltaOra)) {
             if (selectedTrigger1.equals(sceltaOra))
                 t1 = new TempoDelGiorno(orarioScelto);
@@ -695,6 +705,8 @@ public class RegoleRipetuteController {
                 t3 = new ConfrontoContatori(contatore1, confronto2, contatore2);
         }
 
+
+        t = new TriggerComposto(t1, t2, t3, logica1, logica2, nT1, nT2, nT3);
 
 
 
@@ -781,7 +793,9 @@ public class RegoleRipetuteController {
         Regola r = new Regola(nome, t, a, true, false, false);
 
         gestore.aggiungiRegola(r);
-        gestore.saveObjectsToFile();
+        //gestore.saveObjectsToFile();
+
+        System.out.println(r);
 
         if (helloController != null) {
             helloController.aggiornaTabella(Collections.singletonList(r));

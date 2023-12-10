@@ -36,7 +36,7 @@ public class AzioneComposta implements Azione {
 
     @Override
     public String toString() {
-        return "AzioneComposta: " + primaAzione + " " + secondaAzione + " " + terzaAzione;
+        return "AzioneComposta: " + primaAzione + " & " + secondaAzione + " & " + terzaAzione;
     }
 
 }
