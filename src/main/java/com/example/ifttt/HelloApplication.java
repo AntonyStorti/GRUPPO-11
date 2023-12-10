@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        // Carica l'icona
+
         Image icon = new Image(getClass().getResourceAsStream("/com/example/ifttt/logo.png"));
 
         // Imposta l'icona per la finestra principale
