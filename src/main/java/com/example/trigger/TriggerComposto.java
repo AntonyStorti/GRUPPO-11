@@ -46,7 +46,7 @@ public class TriggerComposto implements Trigger {
 
     @Override
     public String toString() {
-        return null;
+        return "Se: " + primoTrigger + " & " + secondoTrigger + " & " + terzoTriger;
     }
 
 
