@@ -78,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Terzo-Sprint-(Consegna-Finale)",
+    "git-widget-placeholder": "Terzo-Sprint",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/antony/Desktop/Applicazione IFTTT",
@@ -235,7 +235,7 @@
       <workItem from="1702045521856" duration="620000" />
       <workItem from="1702046385676" duration="4026000" />
       <workItem from="1702118219084" duration="22579000" />
-      <workItem from="1702200124587" duration="753000" />
+      <workItem from="1702200124587" duration="1089000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Configuration: JavaFX">
       <option name="closed" value="true" />
@@ -421,7 +421,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702200723077</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702201025218</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702201025218</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Terzo Sprint">
+      <option name="closed" value="true" />
+      <created>1702201116977</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1702201116977</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

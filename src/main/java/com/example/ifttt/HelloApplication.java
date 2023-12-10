@@ -19,8 +19,6 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         Image icon = new Image(getClass().getResourceAsStream("/com/example/ifttt/logo.png"));
-
-        // Imposta l'icona per la finestra principale
         stage.getIcons().add(icon);
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/ifttt/HomePage.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 750);
