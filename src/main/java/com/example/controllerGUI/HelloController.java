@@ -158,13 +158,15 @@ public class HelloController {
             // Rimuovi dalla lista di GestoreRegole
             GestoreRegole.listaRegole.remove(r);
 
-            // Aggiorna la lista rimuovendo automaticamente gli elementi successivi
-            int selectedIndex = tabellaRegole.getItems().indexOf(r);
-            GestoreRegole.listaRegole.forEach(regola -> {
-                if (regola.getID() > selectedIndex) {
-                    regola.setID(regola.getID() - 1);
-                }
-            });
+            for (int i = tabellaRegole.getSelectionModel().getSelectedIndex() + 1; i < tabellaRegole.getItems().size(); i++) {
+
+                Regola regolaSuccessiva = tabellaRegole.getItems().get(i);
+                regolaSuccessiva.setID(regolaSuccessiva.getID() - 1);
+                // Aggiorna la lista
+                GestoreRegole.listaRegole.set(i, regolaSuccessiva);
+
+            }
+            System.out.println(GestoreRegole.listaRegole);
 
             // Rimuovi dal file JSON
             rimuoviRegolaDaFile(r);
