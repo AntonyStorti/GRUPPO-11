@@ -1,5 +1,6 @@
 package com.example.trigger;
 
+import com.example.ifttt.Trigger;
 import org.json.JSONObject;
 
 import java.time.LocalDate;
@@ -47,6 +48,13 @@ public class TriggerSuData extends TriggerTemporali {
 
     }
 
+    public static Trigger deserialize(JSONObject jsonTrigger) {
+
+        LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
+        LocalDate data = LocalDate.parse(jsonTrigger.getString("data"));
+        return new TriggerSuData(tempo, data);
+
+    }
 
     @Override
     public String getTipo() {

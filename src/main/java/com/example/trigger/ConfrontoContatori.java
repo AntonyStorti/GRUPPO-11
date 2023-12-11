@@ -1,6 +1,7 @@
 package com.example.trigger;
 
 import com.example.ifttt.Contatore;
+import com.example.ifttt.Trigger;
 import org.json.JSONObject;
 
 import java.util.Objects;
@@ -58,6 +59,16 @@ public class ConfrontoContatori extends TriggerContatori {
 
     }
 
+    public static Trigger deserialize(JSONObject jsonTrigger) {
+
+        JSONObject c1 = jsonTrigger.getJSONObject("contatore1");
+        Contatore contatore1 = Contatore.deserializeContatore(c1);
+        String confronto = jsonTrigger.getString("confronto");
+        JSONObject c2 = jsonTrigger.getJSONObject("contatore2");
+        Contatore contatore2 = Contatore.deserializeContatore(c2);
+        return new ConfrontoContatori(contatore1, confronto, contatore2);
+
+    }
 
     @Override
     public String getTipo() {

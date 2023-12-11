@@ -17,9 +17,7 @@ public abstract class AzioniSuContatori implements Azione, Serializable {
         this.contatore = contatore;
     }
 
-    public Contatore getContatore() {
-        return contatore;
-    }
+
 
     public abstract JSONObject toJSONObject();
 

@@ -1,0 +1,24 @@
+{"regole": [{
+  "eseguito": false,
+  "stato": true,
+  "ripetibile": false,
+  "azione": {
+    "tipo": "AzioneComposta",
+    "primaAzione": {
+      "tipo": "FinestraDialogo",
+      "testoUtente": "aaa"
+    },
+    "numeroAzioni": 1
+  },
+  "nome": "a",
+  "ID": 1,
+  "trigger": {
+    "tipo": "TriggerComposto",
+    "numeroTrigger": 1,
+    "not1": false,
+    "primoTrigger": {
+      "tipo": "TempoDelGiorno",
+      "tempo": "11:11"
+    }
+  }
+}]}

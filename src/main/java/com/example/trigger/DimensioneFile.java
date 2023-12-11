@@ -1,5 +1,6 @@
 package com.example.trigger;
 
+import com.example.ifttt.Trigger;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -82,6 +83,15 @@ public class DimensioneFile extends TriggerSuFile {
         jsonObject.put("unita", unita);
 
         return jsonObject;
+
+    }
+
+    public static Trigger deserialize(JSONObject jsonTrigger) {
+
+        String percorso = jsonTrigger.getString("percorso");
+        int dimensione = jsonTrigger.getInt("dimensione");
+        String unita = jsonTrigger.getString("unita");
+        return new DimensioneFile(percorso, dimensione, unita);
 
     }
 

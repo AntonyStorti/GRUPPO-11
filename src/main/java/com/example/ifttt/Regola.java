@@ -148,6 +148,15 @@ public class Regola implements Serializable {
             return "Disattiva";
     }
 
+    public String getRipetibile() {
+        if (ripetibile == true) {
+
+            return "Dopo: " + String.valueOf(periodoIbernazione.toDays()) + "g " + String.valueOf(periodoIbernazione.toHoursPart()) + "h " + String.valueOf(periodoIbernazione.toMinutesPart()) + "m";
+
+        }
+        else
+            return "No";
+    }
 
     public Instant getUltimaEsecuzione() {
         return ultimaEsecuzione;

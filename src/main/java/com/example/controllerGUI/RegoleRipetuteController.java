@@ -618,179 +618,188 @@ public class RegoleRipetuteController {
         boolean nT3 = nega3.isSelected();
 
 
-
-        Trigger t = null;
-        Azione a = null;
-
         //Trigger:
         Trigger t1 = null;
         Trigger t2 = null;
         Trigger t3 = null;
 
-        if (selectedTrigger1.equals(sceltaOra) || selectedTrigger2.equals(sceltaOra) || selectedTrigger3.equals(sceltaOra)) {
+        if (selectedTrigger1.equals(sceltaOra) || selectedTrigger2 != null && selectedTrigger2.equals(sceltaOra) || selectedTrigger3 != null && selectedTrigger3.equals(sceltaOra)) {
             if (selectedTrigger1.equals(sceltaOra))
                 t1 = new TempoDelGiorno(orarioScelto);
-            if (selectedTrigger2.equals(sceltaOra))
+            if (selectedTrigger2 != null && selectedTrigger2.equals(sceltaOra))
                 t2 = new TempoDelGiorno(orarioScelto);
-            if (selectedTrigger3.equals(sceltaOra))
+            if (selectedTrigger3 != null && selectedTrigger3.equals(sceltaOra))
                 t3 = new TempoDelGiorno(orarioScelto);
         }
-        if (selectedTrigger1.equals(sceltaGiorno) || selectedTrigger2.equals(sceltaGiorno) || selectedTrigger3.equals(sceltaGiorno)){
+        if (selectedTrigger1.equals(sceltaGiorno) || selectedTrigger2 != null && selectedTrigger2.equals(sceltaGiorno) || selectedTrigger3 != null && selectedTrigger3.equals(sceltaGiorno)){
             if (selectedTrigger1.equals(sceltaGiorno))
                 t1 = new TriggerSettimanale(LocalTime.of(0, 0), giornoSettimana);
-            if (selectedTrigger2.equals(sceltaGiorno))
+            if (selectedTrigger2 != null && selectedTrigger2.equals(sceltaGiorno))
                 t2 = new TriggerSettimanale(LocalTime.of(0, 0), giornoSettimana);
-            if (selectedTrigger3.equals(sceltaGiorno))
+            if (selectedTrigger3 != null && selectedTrigger3.equals(sceltaGiorno))
                 t3 = new TriggerSettimanale(LocalTime.of(0, 0), giornoSettimana);
         }
-        if (selectedTrigger1.equals(sceltaGMese) || selectedTrigger2.equals(sceltaGMese) || selectedTrigger3.equals(sceltaGMese)) {
+        if (selectedTrigger1.equals(sceltaGMese) || selectedTrigger2 != null && selectedTrigger2.equals(sceltaGMese) || selectedTrigger3 != null && selectedTrigger3.equals(sceltaGMese)) {
             if(selectedTrigger1.equals(sceltaGMese))
                 t1 = new TriggerMensile(LocalTime.of(0, 0), giornoMese);
-            if(selectedTrigger2.equals(sceltaGMese))
+            if(selectedTrigger2 != null && selectedTrigger2.equals(sceltaGMese))
                 t2 = new TriggerMensile(LocalTime.of(0, 0), giornoMese);
-            if(selectedTrigger3.equals(sceltaGMese))
+            if(selectedTrigger3 != null && selectedTrigger3.equals(sceltaGMese))
                 t3 = new TriggerMensile(LocalTime.of(0, 0), giornoMese);
         }
-        if (selectedTrigger1.equals(sceltaData) || selectedTrigger2.equals(sceltaData) || selectedTrigger3.equals(sceltaData)) {
+        if (selectedTrigger1.equals(sceltaData) || selectedTrigger2 != null && selectedTrigger2.equals(sceltaData) || selectedTrigger3 != null && selectedTrigger3.equals(sceltaData)) {
             if (selectedTrigger1.equals(sceltaData))
                 t1 = new TriggerSuData(LocalTime.of(0, 0), dataCompleta);
-            if (selectedTrigger2.equals(sceltaData))
+            if (selectedTrigger2 != null && selectedTrigger2.equals(sceltaData))
                 t2 = new TriggerSuData(LocalTime.of(0, 0), dataCompleta);
-            if (selectedTrigger3.equals(sceltaData))
+            if (selectedTrigger3 != null && selectedTrigger3.equals(sceltaData))
                 t3 = new TriggerSuData(LocalTime.of(0, 0), dataCompleta);
         }
-        if (selectedTrigger1.equals(esisteFile) || selectedTrigger2.equals(esisteFile) || selectedTrigger3.equals(esisteFile)){
+        if (selectedTrigger1.equals(esisteFile) || selectedTrigger2 != null && selectedTrigger2.equals(esisteFile) || selectedTrigger3 != null && selectedTrigger3.equals(esisteFile)){
             if (selectedTrigger1.equals(esisteFile))
                 t1 = new FileEsiste(cartella, nomeFileE);
-            if (selectedTrigger2.equals(esisteFile))
+            if (selectedTrigger2 != null && selectedTrigger2.equals(esisteFile))
                 t2 = new FileEsiste(cartella, nomeFileE);
-            if (selectedTrigger3.equals(esisteFile))
+            if (selectedTrigger3 != null && selectedTrigger3.equals(esisteFile))
                 t3 = new FileEsiste(cartella, nomeFileE);
         }
-        if (selectedTrigger1.equals(dimFile) || selectedTrigger2.equals(dimFile) || selectedTrigger3.equals(dimFile)){
+        if (selectedTrigger1.equals(dimFile) || selectedTrigger2 != null && selectedTrigger2.equals(dimFile) || selectedTrigger3 != null && selectedTrigger3.equals(dimFile)){
             if(selectedTrigger1.equals(dimFile))
                 t1 = new DimensioneFile(nomeFile,dimensione, unita);
-            if(selectedTrigger2.equals(dimFile))
+            if(selectedTrigger2 != null && selectedTrigger2.equals(dimFile))
                 t2 = new DimensioneFile(nomeFile,dimensione, unita);
-            if(selectedTrigger3.equals(dimFile))
+            if(selectedTrigger3 != null && selectedTrigger3.equals(dimFile))
                 t3 = new DimensioneFile(nomeFile,dimensione, unita);
         }
-        if (selectedTrigger1.equals(exitStatus) || selectedTrigger2.equals(exitStatus) || selectedTrigger3.equals(exitStatus)){
+        if (selectedTrigger1.equals(exitStatus) || selectedTrigger2 != null && selectedTrigger2.equals(exitStatus) || selectedTrigger3 != null && selectedTrigger3.equals(exitStatus)){
             if (selectedTrigger1.equals(exitStatus))
                 t1 = new ExitStatus(percorsoAPP, exitStatusU);
-            if (selectedTrigger2.equals(exitStatus))
+            if (selectedTrigger2 != null && selectedTrigger2.equals(exitStatus))
                 t2 = new ExitStatus(percorsoAPP, exitStatusU);
-            if (selectedTrigger3.equals(exitStatus))
+            if (selectedTrigger3 != null && selectedTrigger3.equals(exitStatus))
                 t3 = new ExitStatus(percorsoAPP, exitStatusU);
         }
-        if (selectedTrigger1.equals(contatoreInt) || selectedTrigger2.equals(contatoreInt) || selectedTrigger3.equals(contatoreInt)){
+        if (selectedTrigger1.equals(contatoreInt) || selectedTrigger2 != null && selectedTrigger2.equals(contatoreInt) || selectedTrigger3 != null && selectedTrigger3.equals(contatoreInt)){
             if (selectedTrigger1.equals(contatoreInt))
                 t1 = new ContatoreIntero(contatore, intero,confronto);
-            if (selectedTrigger2.equals(contatoreInt))
+            if (selectedTrigger2 != null && selectedTrigger2.equals(contatoreInt))
                 t2 = new ContatoreIntero(contatore, intero,confronto);
-            if (selectedTrigger3.equals(contatoreInt))
+            if (selectedTrigger3 != null && selectedTrigger3.equals(contatoreInt))
                 t3 = new ContatoreIntero(contatore, intero,confronto);
         }
-        if (selectedTrigger1.equals(confrontaContatori) || selectedTrigger2.equals(confrontaContatori) || selectedTrigger3.equals(confrontaContatori)) {
+        if (selectedTrigger1.equals(confrontaContatori) || selectedTrigger2 != null && selectedTrigger2.equals(confrontaContatori) || selectedTrigger3 != null && selectedTrigger3.equals(confrontaContatori)) {
             if (selectedTrigger1.equals(confrontaContatori))
                 t1 = new ConfrontoContatori(contatore1, confronto2, contatore2);
-            if (selectedTrigger2.equals(confrontaContatori))
+            if (selectedTrigger2 != null && selectedTrigger2.equals(confrontaContatori))
                 t2 = new ConfrontoContatori(contatore1, confronto2, contatore2);
-            if (selectedTrigger3.equals(confrontaContatori))
+            if (selectedTrigger3 != null && selectedTrigger3.equals(confrontaContatori))
                 t3 = new ConfrontoContatori(contatore1, confronto2, contatore2);
         }
 
+        Trigger t;
 
-        t = new TriggerComposto(t1, t2, t3, logica1, logica2, nT1, nT2, nT3);
-
-
+        if (t1 != null && t2 != null && t3 != null)
+            t = new TriggerComposto(t1, t2, t3, logica1, logica2, nT1, nT2, nT3);
+        else if (t1 != null && t2 != null)
+            t = new TriggerComposto(t1, t2, logica1, nT1, nT2);
+        else
+            t = new TriggerComposto(t1, nT1);
 
         //Azioni:
         Azione a1 = null;
         Azione a2 = null;
         Azione a3 = null;
 
-        if (selectedAzione1.equals(sceltaMes) || selectedAzione2.equals(sceltaMes) || selectedAzione3.equals(sceltaMes)) {
+        if (selectedAzione1.equals(sceltaMes) || selectedAzione2 != null && selectedAzione2.equals(sceltaMes) || selectedAzione3 != null && selectedAzione3.equals(sceltaMes)) {
             if (selectedAzione1.equals(sceltaMes))
                 a1 = new FinestraDialogo(testoUtente);
-            if (selectedAzione2.equals(sceltaMes))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaMes))
                 a2 = new FinestraDialogo(testoUtente);
-            if (selectedAzione3.equals(sceltaMes))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaMes))
                 a3 = new FinestraDialogo(testoUtente);
         }
-        if (selectedAzione1.equals(sceltaAud) || selectedAzione2.equals(sceltaAud) || selectedAzione3.equals(sceltaAud)) {
+        if (selectedAzione1.equals(sceltaAud) || selectedAzione2 != null && selectedAzione2.equals(sceltaAud) || selectedAzione3 != null && selectedAzione3.equals(sceltaAud)) {
             if (selectedAzione1.equals(sceltaAud))
                 a1 = tracciaAudio;
-            if (selectedAzione2.equals(sceltaAud))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaAud))
                 a2 = tracciaAudio;
-            if (selectedAzione3.equals(sceltaAud))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaAud))
                 a3 = tracciaAudio;
         }
-        if (selectedAzione1.equals(sceltaPro) || selectedAzione2.equals(sceltaPro) || selectedAzione3.equals(sceltaPro)) {
+        if (selectedAzione1.equals(sceltaPro) || selectedAzione2 != null && selectedAzione2.equals(sceltaPro) || selectedAzione3 != null && selectedAzione3.equals(sceltaPro)) {
             if (selectedAzione1.equals(sceltaPro))
                 a1 = app;
-            if (selectedAzione2.equals(sceltaPro))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaPro))
                 a2 = app;
-            if (selectedAzione3.equals(sceltaPro))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaPro))
                 a3 = app;
         }
-        if (selectedAzione1.equals(sceltaStringa) || selectedAzione2.equals(sceltaStringa) || selectedAzione3.equals(sceltaStringa)){
+        if (selectedAzione1.equals(sceltaStringa) || selectedAzione2 != null && selectedAzione2.equals(sceltaStringa) || selectedAzione3 != null && selectedAzione3.equals(sceltaStringa)){
             if (selectedAzione1.equals(sceltaStringa))
                 a1 = new AggiungiStringa(percorsoFile, stringa);
-            if (selectedAzione2.equals(sceltaStringa))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaStringa))
                 a2 = new AggiungiStringa(percorsoFile, stringa);
-            if (selectedAzione3.equals(sceltaStringa))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaStringa))
                 a3 = new AggiungiStringa(percorsoFile, stringa);
         }
-        if (selectedAzione1.equals(sceltaEliminaFile) || selectedAzione2.equals(sceltaEliminaFile) || selectedAzione3.equals(sceltaEliminaFile)) {
+        if (selectedAzione1.equals(sceltaEliminaFile) || selectedAzione2 != null && selectedAzione2.equals(sceltaEliminaFile) || selectedAzione3 != null && selectedAzione3.equals(sceltaEliminaFile)) {
             if (selectedAzione1.equals(sceltaEliminaFile))
                 a1 = path;
-            if (selectedAzione2.equals(sceltaEliminaFile))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaEliminaFile))
                 a2 = path;
-            if (selectedAzione3.equals(sceltaEliminaFile))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaEliminaFile))
                 a3 = path;
         }
-        if (selectedAzione1.equals(sceltaCopiaSposta) || selectedAzione2.equals(sceltaCopiaSposta) || selectedAzione3.equals(sceltaCopiaSposta)){
+        if (selectedAzione1.equals(sceltaCopiaSposta) || selectedAzione2 != null && selectedAzione2.equals(sceltaCopiaSposta) || selectedAzione3 != null && selectedAzione3.equals(sceltaCopiaSposta)){
             if (selectedAzione1.equals(sceltaCopiaSposta))
                 a1 = new CopiaSposta(sorgente, destinazione, scelta);
-            if (selectedAzione2.equals(sceltaCopiaSposta))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaCopiaSposta))
                 a2 = new CopiaSposta(sorgente, destinazione, scelta);
-            if (selectedAzione3.equals(sceltaCopiaSposta))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaCopiaSposta))
                 a3 = new CopiaSposta(sorgente, destinazione, scelta);
         }
-        if (selectedAzione1.equals(sceltaCambiaValore) || selectedAzione2.equals(sceltaCambiaValore) || selectedAzione3.equals(sceltaCambiaValore)) {
+        if (selectedAzione1.equals(sceltaCambiaValore) || selectedAzione2 != null && selectedAzione2.equals(sceltaCambiaValore) || selectedAzione3 != null && selectedAzione3.equals(sceltaCambiaValore)) {
             if (selectedAzione1.equals(sceltaCambiaValore))
                 a1 = new CambiaValoreContatore(contatoreDaAggiornare, nuovoValore);
-            if (selectedAzione2.equals(sceltaCambiaValore))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaCambiaValore))
                 a2 = new CambiaValoreContatore(contatoreDaAggiornare, nuovoValore);
-            if (selectedAzione3.equals(sceltaCambiaValore))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaCambiaValore))
                 a3 = new CambiaValoreContatore(contatoreDaAggiornare, nuovoValore);
         }
-        if (selectedAzione1.equals(sceltaSommaValore) || selectedAzione2.equals(sceltaSommaValore) || selectedAzione3.equals(sceltaSommaValore)) {
+        if (selectedAzione1.equals(sceltaSommaValore) || selectedAzione2 != null && selectedAzione2.equals(sceltaSommaValore) || selectedAzione3 != null && selectedAzione3.equals(sceltaSommaValore)) {
             if (selectedAzione1.equals(sceltaSommaValore))
                 a1 = new SommaValoreContatore(contatorePiuIntero, valoreDaSommare);
-            if (selectedAzione2.equals(sceltaSommaValore))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaSommaValore))
                 a2 = new SommaValoreContatore(contatorePiuIntero, valoreDaSommare);
-            if (selectedAzione3.equals(sceltaSommaValore))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaSommaValore))
                 a3 = new SommaValoreContatore(contatorePiuIntero, valoreDaSommare);
         }
-        if (selectedAzione1.equals(sceltaSommaContatori) || selectedAzione2.equals(sceltaSommaContatori) || selectedAzione3.equals(sceltaSommaContatori)) {
+        if (selectedAzione1.equals(sceltaSommaContatori) || selectedAzione2 != null && selectedAzione2.equals(sceltaSommaContatori) || selectedAzione3 != null && selectedAzione3.equals(sceltaSommaContatori)) {
             if (selectedAzione1.equals(sceltaSommaContatori))
                 a1 = new SommaContatori(contatoreSomma1, contatoreSomma2);
-            if (selectedAzione2.equals(sceltaSommaContatori))
+            if (selectedAzione2 != null && selectedAzione2.equals(sceltaSommaContatori))
                 a2 = new SommaContatori(contatoreSomma1, contatoreSomma2);
-            if (selectedAzione3.equals(sceltaSommaContatori))
+            if (selectedAzione3 != null && selectedAzione3.equals(sceltaSommaContatori))
                 a3 = new SommaContatori(contatoreSomma1, contatoreSomma2);
         }
 
-        a = new AzioneComposta(a1, a2, a3);
+
+        Azione a;
+
+        if (a1 != null && a2 != null && a3 != null)
+            a = new AzioneComposta(a1, a2, a3);
+        else if (a1 != null && a2 != null)
+            a = new AzioneComposta(a1, a2);
+        else
+            a = new AzioneComposta(a1);
 
         Regola r = new Regola(nome, t, a, true, false, false);
 
         gestore.aggiungiRegola(r);
-        //gestore.saveObjectsToFile();
+        gestore.saveObjectsToFile();
 
         System.out.println(r);
+        System.out.println(GestoreRegole.listaRegole);
 
         if (helloController != null) {
             helloController.aggiornaTabella(Collections.singletonList(r));

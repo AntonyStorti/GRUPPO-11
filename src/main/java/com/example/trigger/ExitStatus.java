@@ -54,6 +54,14 @@ public class ExitStatus implements Trigger {
 
     }
 
+    public static Trigger deserialize(JSONObject jsonTrigger) {
+
+        String percorso = jsonTrigger.getString("percorso");
+        Integer exitStatus = jsonTrigger.getInt("exitStatus");
+        return new ExitStatus(percorso, exitStatus);
+
+    }
+
 
     public String getTipo() {
         return "ExitStatus";

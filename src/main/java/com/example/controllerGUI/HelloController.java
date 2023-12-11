@@ -29,10 +29,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.DayOfWeek;
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -393,56 +390,37 @@ public class HelloController {
         String tipoTrigger = jsonTrigger.getString("tipo");
 
         if ("TempoDelGiorno".equals(tipoTrigger)) {
-            LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
-            return new TempoDelGiorno(tempo);
+            return TempoDelGiorno.deserialize(jsonTrigger);
         }
         if ("TriggerSettimanale".equals(tipoTrigger)) {
-            LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
-            DayOfWeek giorno = DayOfWeek.valueOf(jsonTrigger.getString("giornosettimana"));
-            return new TriggerSettimanale(tempo, giorno);
+            return TriggerSettimanale.deserialize(jsonTrigger);
         }
         if ("TriggerMensile".equals(tipoTrigger)) {
-            LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
-            LocalDate giorno = LocalDate.parse(jsonTrigger.getString("giornomese"));
-            return new TriggerMensile(tempo, giorno);
+            return TriggerMensile.deserialize(jsonTrigger);
         }
         if ("TriggerSuData".equals(tipoTrigger)) {
-            LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
-            LocalDate data = LocalDate.parse(jsonTrigger.getString("data"));
-            return new TriggerSuData(tempo, data);
+            return TriggerSuData.deserialize(jsonTrigger);
         }
         if ("FileEsiste".equals(tipoTrigger)) {
-            String percorso = jsonTrigger.getString("percorso");
-            String nomefile = jsonTrigger.getString("nomefile");
-            return new FileEsiste(percorso, nomefile);
+            return FileEsiste.deserialize(jsonTrigger);
         }
         if ("DimensioneFile".equals(tipoTrigger)) {
-            String percorso = jsonTrigger.getString("percorso");
-            int dimensione = jsonTrigger.getInt("dimensione");
-            String unita = jsonTrigger.getString("unita");
-            return new DimensioneFile(percorso, dimensione, unita);
+            return DimensioneFile.deserialize(jsonTrigger);
         }
         if ("ExitStatus".equals(tipoTrigger)) {
-            String percorso = jsonTrigger.getString("percorso");
-            Integer exitStatus = jsonTrigger.getInt("exitStatus");
-            return new ExitStatus(percorso, exitStatus);
+            return ExitStatus.deserialize(jsonTrigger);
         }
         if ("ContatoreIntero".equals(tipoTrigger))
         {
-            JSONObject c = jsonTrigger.getJSONObject("contatore");
-            Contatore contatore = Contatore.deserializeContatore(c);
-            Integer valore = jsonTrigger.getInt("valore");
-            String confronto = jsonTrigger.getString("confronto");
-            return new ContatoreIntero(contatore, valore, confronto);
+            return ContatoreIntero.deserialize(jsonTrigger);
         }
         if ("ConfrontoContatori".equals(tipoTrigger))
         {
-            JSONObject c1 = jsonTrigger.getJSONObject("contatore1");
-            Contatore contatore1 = Contatore.deserializeContatore(c1);
-            String confronto = jsonTrigger.getString("confronto");
-            JSONObject c2 = jsonTrigger.getJSONObject("contatore2");
-            Contatore contatore2 = Contatore.deserializeContatore(c2);
-            return new ConfrontoContatori(contatore1, confronto, contatore2);
+            return ConfrontoContatori.deserialize(jsonTrigger);
+        }
+        if ("TriggerComposto".equals(tipoTrigger))
+        {
+            return TriggerComposto.deserialize(jsonTrigger);
         }
 
         return null;
@@ -479,6 +457,9 @@ public class HelloController {
         }
         if("SommaContatori".equals(tipoAzione)) {
             return SommaContatori.deserialize(jsonAzione);
+        }
+        if("AzioneComposta".equals(tipoAzione)) {
+            return AzioneComposta.deserialize(jsonAzione);
         }
 
         return null;

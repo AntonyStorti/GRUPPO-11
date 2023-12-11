@@ -65,8 +65,4 @@ public class FinestraDialogo implements Azione, Serializable {
         return "FinestraDialogo";
     }
 
-    public String getTestoUtente() {
-        return testoUtente;
-    }
-
 }

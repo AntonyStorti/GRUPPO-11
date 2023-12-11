@@ -1,5 +1,6 @@
 package com.example.trigger;
 
+import com.example.ifttt.Trigger;
 import org.json.JSONObject;
 
 import java.time.DayOfWeek;
@@ -72,6 +73,14 @@ public class TriggerSettimanale extends TriggerTemporali {
         jsonObject.put("giornosettimana", gSettimana);
 
         return jsonObject;
+
+    }
+
+    public static Trigger deserialize(JSONObject jsonTrigger) {
+
+        LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
+        DayOfWeek giorno = DayOfWeek.valueOf(jsonTrigger.getString("giornosettimana"));
+        return new TriggerSettimanale(tempo, giorno);
 
     }
 

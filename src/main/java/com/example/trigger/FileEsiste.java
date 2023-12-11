@@ -1,5 +1,6 @@
 package com.example.trigger;
 
+import com.example.ifttt.Trigger;
 import org.json.JSONObject;
 
 import java.nio.file.Files;
@@ -45,6 +46,14 @@ public class FileEsiste extends TriggerSuFile {
         jsonObject.put("nomefile", nomeFile);
 
         return jsonObject;
+
+    }
+
+    public static Trigger deserialize(JSONObject jsonTrigger) {
+
+        String percorso = jsonTrigger.getString("percorso");
+        String nomefile = jsonTrigger.getString("nomefile");
+        return new FileEsiste(percorso, nomefile);
 
     }
 

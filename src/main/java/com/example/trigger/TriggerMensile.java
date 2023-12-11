@@ -1,5 +1,6 @@
 package com.example.trigger;
 
+import com.example.ifttt.Trigger;
 import org.json.JSONObject;
 
 import java.time.LocalDate;
@@ -43,6 +44,14 @@ public class TriggerMensile extends TriggerTemporali {
         jsonObject.put("giornomese", giornoMese);
 
         return jsonObject;
+
+    }
+
+    public static Trigger deserialize(JSONObject jsonTrigger) {
+
+        LocalTime tempo = LocalTime.parse(jsonTrigger.getString("tempo"));
+        LocalDate giorno = LocalDate.parse(jsonTrigger.getString("giornomese"));
+        return new TriggerMensile(tempo, giorno);
 
     }
 
