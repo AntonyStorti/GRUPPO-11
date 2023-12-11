@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllerGUI.RegoleRipetuteController">
+    <children>
+        <ChoiceBox fx:id="Trigger1" layoutX="69.0" layoutY="108.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Seleziona un orario" />
+                    <String fx:value="Seleziona un giorno" />
+                    <String fx:value="Seleziona un giorno del mese" />
+                    <String fx:value="Seleziona una data" />
+                    <String fx:value="Se esiste un File" />
+                    <String fx:value="Se la dimensione del file è &gt; di" />
+                    <String fx:value="Se un programma ha 'Exist status':" />
+                    <String fx:value="Confronta un contatore con intero" />
+                    <String fx:value="Confronta due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="Trigger2" disable="true" layoutX="358.0" layoutY="108.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Seleziona un orario" />
+                    <String fx:value="Seleziona un giorno" />
+                    <String fx:value="Seleziona un giorno del mese" />
+                    <String fx:value="Seleziona una data" />
+                    <String fx:value="Se esiste un File" />
+                    <String fx:value="Se la dimensione del file è &gt; di" />
+                    <String fx:value="Se un programma ha 'Exist status':" />
+                    <String fx:value="Confronta un contatore con intero" />
+                    <String fx:value="Confronta due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="Trigger3" disable="true" layoutX="661.0" layoutY="108.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Seleziona un orario" />
+                    <String fx:value="Seleziona un giorno" />
+                    <String fx:value="Seleziona un giorno del mese" />
+                    <String fx:value="Seleziona una data" />
+                    <String fx:value="Se esiste un File" />
+                    <String fx:value="Se la dimensione del file è &gt; di" />
+                    <String fx:value="Se un programma ha 'Exist status':" />
+                    <String fx:value="Confronta un contatore con intero" />
+                    <String fx:value="Confronta due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="Azione1" layoutX="135.0" layoutY="237.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Riproduci un audio" />
+                    <String fx:value="Visualizza messaggio" />
+                    <String fx:value="Esegui un programma" />
+                    <String fx:value="Aggiungi una stringa" />
+                    <String fx:value="Elimina un file" />
+                    <String fx:value="Copia/Sposta un file" />
+                    <String fx:value="Settare contatore a un valore" />
+                    <String fx:value="Sommare un intero a un contatore" />
+                    <String fx:value="Sommare due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="Azione2" disable="true" layoutX="358.0" layoutY="237.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Riproduci un audio" />
+                    <String fx:value="Visualizza messaggio" />
+                    <String fx:value="Esegui un programma" />
+                    <String fx:value="Aggiungi una stringa" />
+                    <String fx:value="Elimina un file" />
+                    <String fx:value="Copia/Sposta un file" />
+                    <String fx:value="Settare contatore a un valore" />
+                    <String fx:value="Sommare un intero a un contatore" />
+                    <String fx:value="Sommare due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="Azione3" disable="true" layoutX="575.0" layoutY="237.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Riproduci un audio" />
+                    <String fx:value="Visualizza messaggio" />
+                    <String fx:value="Esegui un programma" />
+                    <String fx:value="Aggiungi una stringa" />
+                    <String fx:value="Elimina un file" />
+                    <String fx:value="Copia/Sposta un file" />
+                    <String fx:value="Settare contatore a un valore" />
+                    <String fx:value="Sommare un intero a un contatore" />
+                    <String fx:value="Sommare due contatori" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <CheckBox fx:id="nega1" layoutX="19.0" layoutY="112.0" mnemonicParsing="false" text="NOT" />
+        <ChoiceBox fx:id="LogicaT1" layoutX="241.0" layoutY="108.0" prefHeight="26.0" prefWidth="50.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="AND" />
+                    <String fx:value="OR" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <CheckBox fx:id="nega2" disable="true" layoutX="308.0" layoutY="112.0" mnemonicParsing="false" text="NOT" />
+        <ChoiceBox fx:id="LogicaA1" layoutX="299.0" layoutY="237.0" prefHeight="26.0" prefWidth="50.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="AND" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <CheckBox fx:id="nega3" disable="true" layoutX="611.0" layoutY="112.0" mnemonicParsing="false" text="NOT" />
+        <ChoiceBox fx:id="LogicaA2" disable="true" layoutX="515.0" layoutY="237.0" prefHeight="26.0" prefWidth="50.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="AND" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="LogicaT2" disable="true" layoutX="540.0" layoutY="108.0" prefHeight="26.0" prefWidth="50.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="AND" />
+                    <String fx:value="OR" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Button fx:id="creaButton" layoutX="334.0" layoutY="449.0" mnemonicParsing="false" onAction="#creaRegola" prefHeight="37.0" prefWidth="198.0" text="Crea" />
+        <Text layoutX="20.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli la configurazione del Trigger:" wrappingWidth="247.6796875">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="19.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli la sequenza di Azioni: ">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="269.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="59.67970275878906">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Text>
+      <TextField fx:id="sceltaNome" layoutX="358.0" layoutY="351.0" />
+    </children>
+</AnchorPane>

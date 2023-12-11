@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllerGUI.SorgenteDestinazioneController">
+    <children>
+        <Text layoutX="110.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleziona il File:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Text>
+        <Text layoutX="54.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Percorso di Destinazione:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Text>
+        <Button fx:id="scegliFileButton" layoutX="251.0" layoutY="30.0" mnemonicParsing="false" onAction="#selezionaFile" text="Scegli" />
+        <Button fx:id="cartellaDestinazioneButton" layoutX="223.0" layoutY="80.0" mnemonicParsing="false" onAction="#scegliDestinazione" text="Scegli la Cartella" />
+        <Button fx:id="inviaButton" layoutX="155.0" layoutY="259.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" onAction="#invia" text="Invia" />
+        <ChoiceBox fx:id="scegliAzione" layoutX="125.0" layoutY="150.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Copia nella destinazione" />
+                <String fx:value="Sposta nella destinazione" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+    </children>
+</AnchorPane>

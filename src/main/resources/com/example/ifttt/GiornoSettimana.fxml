@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllerGUI.GiornoSettimanaController">
+    <children>
+        <Button fx:id="inviaButton" layoutX="130.0" layoutY="160.0" mnemonicParsing="false" onAction="#inviaGiorno" text="Invia" />
+        <ChoiceBox fx:id="giornoBox" layoutX="75.0" layoutY="75.0" prefWidth="150.0" >
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Lunedì" />
+                    <String fx:value="Martedì" />
+                    <String fx:value="Mercoledì" />
+                    <String fx:value="Giovedì" />
+                    <String fx:value="Venerdì" />
+                    <String fx:value="Sabato" />
+                    <String fx:value="Domenica" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+    </children>
+</AnchorPane>
