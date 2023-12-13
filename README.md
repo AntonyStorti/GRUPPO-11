@@ -9,7 +9,7 @@ Il "main" contiene tutte le consegne richieste, ma non il codice sviluppato...
 
 -Il resto della documentazione tecnica prodotta è visionabile al seguente link: https://drive.google.com/drive/u/1/folders/0AMeOgSbL5_-yUk9PVA
 
--Eseguite il .JAR se volete provare l'app !!!
+-Il sorgente del progetto è contenuto nell'ultimo branch!!!
 
 N.B.
 [PER VISIONARE IL CODICE SVILUPPATO NEI VARI "SPRINTS": Navigate nei relativi Branch !!!]
